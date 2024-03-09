@@ -1,0 +1,43 @@
+//^ Header
+// .nav {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+
+//   margin-top: 26px;
+
+//   font-size: 16px;
+//   color: var(--text-paragraph-color);
+
+//   align-items: center;
+
+//   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+//     0px 4px 4px var(--shadow);
+// }
+
+// .logo {
+//   height: 38px;
+// }
+
+// .menu {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   width: 432px;
+
+//   &--auth {
+//     width: 204px;
+//     align-items: center;
+//   }
+// }
+
+// .menu__link {
+//   &:hover,
+//   &:focus {
+//     color: rgba(255, 255, 255, 85%);
+//   }
+
+//   &--non-shadow {
+//     text-shadow: none;
+//   }
+// }

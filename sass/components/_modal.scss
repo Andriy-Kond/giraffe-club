@@ -1,0 +1,125 @@
+// .backdrop {
+//   position: fixed;
+//   z-index: 5;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.5);
+
+//   opacity: 1;
+//   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// .backdrop.is-hidden {
+//   opacity: 0;
+//   pointer-events: none;
+// }
+
+// .modal {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+
+//   min-height: 300px;
+//   min-width: 400px;
+//   padding: 25px;
+
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 20px;
+
+//   border-radius: 5px;
+//   background-color: var(--brand-bg-color);
+
+//   transform: scale(1.1) translate(-50%, -50%);
+
+//   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//   .backdrop.is-hidden & {
+//     transform: scale(0.9) translate(-50%, -50%);
+//   }
+// }
+
+// .modal__label {
+//   display: flex;
+//   align-items: center;
+//   user-select: none;
+
+//   /* position: relative; */
+//   /* outline: 1px solid black; */
+// }
+
+// .modal__input {
+//   /* appearance: none; знімає усі стилі з елементу. В старих браузерах треба замінити на .is-hidden */
+//   appearance: none;
+//   position: absolute;
+// }
+
+// .modal__checkbox-icon {
+//   width: 16px;
+//   height: 16px;
+//   margin-right: 10px;
+
+//   //  Варіант з ЗОБРАЖЕННЯМ бордера:
+//   //  background-image: url("../images/icon-uncheck.svg");
+//   //  background-size: contain;
+
+//   //  Варіант з власноруч намальованим бордером:
+//   border: 2px solid var(--text-title-color);
+//   border-radius: 4px;
+//   background-origin: border-box;
+//   background-repeat: no-repeat;
+//   background-position: center;
+
+//   transition: background-image 250ms ease, border 250ms ease, background-color 250ms ease,
+//     fill 250ms ease;
+
+//   .modal__input:checked + & {
+//     background-image: url("../images/icon-check.svg");
+//     background-size: contain;
+
+//     fill: var(--brand-orange-color);
+//     background-color: var(--brand-orange-color);
+//     border-color: transparent;
+//     background-position: center;
+//   }
+// }
+
+// .modal__accent {
+//   color: #2196f3;
+//   text-decoration: underline;
+// }
+
+// .modal__btns-box {
+//   display: flex;
+//   gap: 20px;
+// }
+
+// .modal__btn-wrapper {
+//   cursor: not-allowed;
+// }
+
+// .btn-close-cross {
+//   position: absolute;
+//   top: 10px;
+//   right: 10px;
+
+//   width: 20px;
+//   height: 20px;
+//   background-size: contain;
+//   border-radius: 50%;
+
+//   background-image: url("../images/close-cross.svg");
+//   background-color: var(--brand-bg-color);
+//   cursor: pointer;
+
+//   transition: scale 250ms ease;
+
+//   &:hover,
+//   &:focus {
+//     scale: 1.2;
+//   }
+// }
