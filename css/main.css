@@ -270,7 +270,7 @@ textarea {
   resize: none;
 }
 
-.address {
+address {
   font-style: normal;
 }
 
@@ -324,29 +324,29 @@ h1 {
   background-position: center;
   background-size: contain;
 }
-
 .about__bg-picture--calendar {
   background-image: url("../../images/svg/calendar.svg");
 }
-
 .about__bg-picture--book {
   background-image: url("../../images/svg/open-book.svg");
 }
-
 .about__bg-picture--female {
   background-image: url("../../images/svg/female.svg");
 }
-
 .about__bg-picture--success {
   background-image: url("../../images/svg/success.svg");
 }
-
 .about__bg-picture--handshake {
   background-image: url("../../images/svg/handshake.svg");
 }
-
 .about__bg-picture--student {
   background-image: url("../../images/svg/graduating-student.svg");
+}
+
+.directions__bg-image {
+  background-image: url("../../images/desktop/giraffe-directions-418.png");
+  width: 418px;
+  height: 590px;
 }
 
 .gallery {
@@ -412,4 +412,10 @@ h1 {
   background-image: url("../images/desktop/journey-8-405.jpg");
   width: 408px;
   height: 196px;
+}
+
+.reviews__bg-image {
+  width: 78px;
+  height: 107px;
+  background-image: url("../../images/desktop/giraffe-about-76.png");
 }/*# sourceMappingURL=main.css.map */
