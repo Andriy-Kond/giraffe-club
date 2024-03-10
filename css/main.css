@@ -318,6 +318,37 @@ h1 {
   margin: 0 auto;
 }
 
+.about__bg-picture {
+  width: 190px;
+  height: 190px;
+  background-position: center;
+  background-size: contain;
+}
+
+.about__bg-picture--calendar {
+  background-image: url("../../images/svg/calendar.svg");
+}
+
+.about__bg-picture--book {
+  background-image: url("../../images/svg/open-book.svg");
+}
+
+.about__bg-picture--female {
+  background-image: url("../../images/svg/female.svg");
+}
+
+.about__bg-picture--success {
+  background-image: url("../../images/svg/success.svg");
+}
+
+.about__bg-picture--handshake {
+  background-image: url("../../images/svg/handshake.svg");
+}
+
+.about__bg-picture--student {
+  background-image: url("../../images/svg/graduating-student.svg");
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -342,50 +373,42 @@ h1 {
   background-position: center;
   border-radius: 10px;
 }
-
-.image-1 {
+.image--1 {
   background-image: url("../images/desktop/journey-1-405.jpg");
   width: 405px;
   height: 500px;
 }
-
-.image-2 {
+.image--2 {
   background-image: url("../images/desktop/journey-2-405.jpg");
   width: 405px;
   height: 500px;
 }
-
-.image-3 {
+.image--3 {
   background-image: url("../images/desktop/journey-3-678.jpg");
   width: 678px;
   height: 392px;
 }
-
-.image-4 {
+.image--4 {
   background-image: url("../images/desktop/journey-4-557.jpg");
   width: 557px;
   height: 392px;
 }
-
-.image-5 {
+.image--5 {
   background-image: url("../images/desktop/journey-5-524.jpg");
   width: 524px;
   height: 608px;
 }
-
-.image-6 {
+.image--6 {
   background-image: url("../images/desktop/journey-6-711.jpg");
   width: 711px;
   height: 392px;
 }
-
-.image-7 {
+.image--7 {
   background-image: url("../images/desktop/journey-7-286.jpg");
   width: 286px;
   height: 196px;
 }
-
-.image-8 {
+.image--8 {
   background-image: url("../images/desktop/journey-8-405.jpg");
   width: 408px;
   height: 196px;

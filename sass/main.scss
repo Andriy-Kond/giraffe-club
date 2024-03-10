@@ -27,71 +27,8 @@
 @import "./components/modal";
 @import "./components/header";
 @import "./components/hero";
+@import "./components/about";
+@import "./components/journey";
 @import "./components/socials";
 
 @import "./components/footer";
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.image {
-  flex: 1 0 auto;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-
-.image-1 {
-  background-image: url("../images/desktop/journey-1-405.jpg");
-  width: 405px;
-  height: 500px;
-}
-.image-2 {
-  background-image: url("../images/desktop/journey-2-405.jpg");
-  width: 405px;
-  height: 500px;
-}
-.image-3 {
-  background-image: url("../images/desktop/journey-3-678.jpg");
-  width: 678px;
-  height: 392px;
-}
-.image-4 {
-  background-image: url("../images/desktop/journey-4-557.jpg");
-  width: 557px;
-  height: 392px;
-}
-.image-5 {
-  background-image: url("../images/desktop/journey-5-524.jpg");
-  width: 524px;
-  height: 608px;
-}
-.image-6 {
-  background-image: url("../images/desktop/journey-6-711.jpg");
-  width: 711px;
-  height: 392px;
-}
-.image-7 {
-  background-image: url("../images/desktop/journey-7-286.jpg");
-  width: 286px;
-  height: 196px;
-}
-.image-8 {
-  background-image: url("../images/desktop/journey-8-405.jpg");
-  width: 408px;
-  height: 196px;
-}
