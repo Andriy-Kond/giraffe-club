@@ -46,6 +46,10 @@ body {
   font-weight: 400; /* для звичайного (regular) стилю */
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1 {
   font-family: "Bookman Old Style", "Times New Roman", serif;
   font-weight: 700; /* для жирного (bold) стилю */
