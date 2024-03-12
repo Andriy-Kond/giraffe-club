@@ -41,3 +41,15 @@
 //     text-shadow: none;
 //   }
 // }
+.navigation::after {
+  display: flex;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #fcfcfc;
+}
+
+.contacts {
+  // @media screen and (max-width: ) {
+  // }
+}

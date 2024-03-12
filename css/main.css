@@ -279,6 +279,11 @@ address {
 body {
   font-family: "Bookman Old Style", "Times New Roman", serif;
   font-weight: 400; /* для звичайного (regular) стилю */
+  background-color: rgba(222, 116, 43, 0.9);
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 h1 {
@@ -316,6 +321,14 @@ h1 {
   max-width: 1440px;
   padding: 0 108px;
   margin: 0 auto;
+}
+
+.navigation::after {
+  display: flex;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #fcfcfc;
 }
 
 .about__bg-picture {

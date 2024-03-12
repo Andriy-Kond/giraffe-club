@@ -44,6 +44,8 @@
 body {
   font-family: "Bookman Old Style", "Times New Roman", serif;
   font-weight: 400; /* для звичайного (regular) стилю */
+
+  background-color: rgba(222, 116, 43, 0.9);
 }
 
 body.modal-open {
