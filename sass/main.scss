@@ -16,14 +16,13 @@
 @import "./base/modern-normalize-v2.0.0";
 @import "./base/project-normalize";
 @import "./base/breakpoints";
-@import "./base/common";
-
 @import "./utils/variables";
-@import "./utils/visually-hidden";
-@import "./utils/flex-model";
-@import "./utils/container";
-@import "./utils/mixins";
 
+@import "./common/visually-hidden";
+@import "./common/container";
+@import "./common/common";
+
+@import "./components/section";
 @import "./components/buttons";
 @import "./components/modal";
 @import "./components/header";

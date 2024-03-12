@@ -1,0 +1,22 @@
+.section {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.section__title {
+  font-family: var(--brand-second-font);
+  font-weight: 700;
+  font-size: 14px;
+
+  &--orange {
+    color: var(--brand-main-color);
+  }
+
+  &--white {
+    color: var(--brand-white-color);
+  }
+
+  &--black {
+    color: var(--brand-black-color);
+  }
+}

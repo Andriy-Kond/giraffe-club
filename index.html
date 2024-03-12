@@ -15,14 +15,15 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <!-- body - orange bg -->
     <header>
       <nav class="navigation" data-menu-nav>
-        <!-- aria-expanded - для доступності, каже чи розкрито меню. За замовчуванням false (закрите) -->
+        <!-- aria-expanded - для доступності, каже чи розкрито меню. За замовчуванням false (закрите) 
+        aria-controls - явно зв'язує два елементи-->
         <button
           type="button"
           class="menu__btn"
           aria-expanded="false"
+          aria-controls="menu-list"
           data-menu-button
         >
           <svg width="48" height="48" aria-label="Відкривач мобільного меню">
@@ -39,7 +40,7 @@
         <div class="menu" data-menu>
           <p class="menu__title">Giraffe Club</p>
 
-          <ul class="menu-list">
+          <ul class="menu-list" id="menu-list">
             <li class="menu-list__item"><a href="">Про нас</a></li>
             <li class="menu-list__item"><a href="">Напрямки роботи</a></li>
             <li class="menu-list__item"><a href="">Навчання</a></li>
@@ -65,119 +66,118 @@
     </header>
     <main>
       <section class="section hero">
-        <!-- hero:before - line up -->
-        <div class="hero-container">
-          <svg width="" height="">
-            <use href=""></use>
-          </svg>
-          <div>
-            <h1>Giraffe Club</h1>
-            <p>
+        <div class="container">
+          <div class="hero__wrapper">
+            <h1 class="hero__title">Giraffe Club</h1>
+            <p class="hero__text">
               Офіційний сертифікований центр підготовки до міжнародних екзаменів
               Cambrige
             </p>
-            <button>Отримати консультацію</button>
+            <button type="button" class="btn">Отримати консультацію</button>
           </div>
-          <img
-            src="./images/desktop/giraffe-hero-539.png"
-            alt="Giraffe image"
-          />
         </div>
       </section>
 
       <section class="section about">
-        <h2>Про нас</h2>
-        <p>Мовних шкіл багато - лідер один!</p>
-        <ul>
-          <li>
-            <p>6 років успішної роботи</p>
-            <div class="about__bg-picture about__bg-picture--calendar"></div>
-          </li>
-          <li>
-            <p>Сучасні програми й навчальні матеріали</p>
-            <div class="about__bg-picture about__bg-picture--book"></div>
-          </li>
-          <li>
-            <p>Професійні викладачі</p>
-            <div class="about__bg-picture about__bg-picture--female"></div>
-          </li>
-          <li>
-            <p>Переможець «Народний Бренд» (2018, 2019, 2020)</p>
-            <div class="about__bg-picture about__bg-picture--success"></div>
-          </li>
-          <li>
-            <p>Топ партнер Cambridge Assessment English</p>
-            <div class="about__bg-picture about__bg-picture--handshake"></div>
-          </li>
-          <li>
-            <p>Сотні наших випускників з високим рівнем</p>
-            <div class="about__bg-picture about__bg-picture--student"></div>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="section__title section__title--orange">Про нас</h2>
+          <p>Мовних шкіл багато - лідер один!</p>
+          <ul>
+            <li>
+              <p>6 років успішної роботи</p>
+              <div class="about__bg-picture about__bg-picture--calendar"></div>
+            </li>
+            <li>
+              <p>Сучасні програми й навчальні матеріали</p>
+              <div class="about__bg-picture about__bg-picture--book"></div>
+            </li>
+            <li>
+              <p>Професійні викладачі</p>
+              <div class="about__bg-picture about__bg-picture--female"></div>
+            </li>
+            <li>
+              <p>Переможець «Народний Бренд» (2018, 2019, 2020)</p>
+              <div class="about__bg-picture about__bg-picture--success"></div>
+            </li>
+            <li>
+              <p>Топ партнер Cambridge Assessment English</p>
+              <div class="about__bg-picture about__bg-picture--handshake"></div>
+            </li>
+            <li>
+              <p>Сотні наших випускників з високим рівнем</p>
+              <div class="about__bg-picture about__bg-picture--student"></div>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="section directions">
-        <h2>Напрямки роботи</h2>
-        <p>Що ти можеш у нас знайти?</p>
-        <div class="directions__bg-image"></div>
-        <ul>
-          <li>
-            <p>01</p>
-            <p>Англійська для дітей від 1 року</p>
-          </li>
-          <li>
-            <p>02</p>
-            <p>Англійська для дорослих</p>
-          </li>
-          <li>
-            <p>03</p>
-            <p>Americanschool для школярів (1- 11 клас)</p>
-          </li>
-          <li>
-            <p>04</p>
-            <p>Підготовка до ЗНО</p>
-          </li>
-          <li>
-            <p>05</p>
-            <p>Підготовка до міжнародних екзаменів YLE, KET, PET, FCE, IELTS</p>
-          </li>
-          <li>
-            <p>06</p>
-            <p>Німецька для дорослих та дітей, віком від 3 років</p>
-          </li>
-          <li>
-            <p>07</p>
-            <p>Підготовка дітей до школи</p>
-          </li>
-          <li>
-            <p>08</p>
-            <p>Літній табір</p>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="section__title section__title--white">Напрямки роботи</h2>
+          <p>Що ти можеш у нас знайти?</p>
+          <div class="directions__bg-image"></div>
+          <ul>
+            <li>
+              <p>01</p>
+              <p>Англійська для дітей від 1 року</p>
+            </li>
+            <li>
+              <p>02</p>
+              <p>Англійська для дорослих</p>
+            </li>
+            <li>
+              <p>03</p>
+              <p>Americanschool для школярів (1- 11 клас)</p>
+            </li>
+            <li>
+              <p>04</p>
+              <p>Підготовка до ЗНО</p>
+            </li>
+            <li>
+              <p>05</p>
+              <p>
+                Підготовка до міжнародних екзаменів YLE, KET, PET, FCE, IELTS
+              </p>
+            </li>
+            <li>
+              <p>06</p>
+              <p>Німецька для дорослих та дітей, віком від 3 років</p>
+            </li>
+            <li>
+              <p>07</p>
+              <p>Підготовка дітей до школи</p>
+            </li>
+            <li>
+              <p>08</p>
+              <p>Літній табір</p>
+            </li>
+          </ul>
+        </div>
         <div class="directions__bg-image"></div>
 
         <button>Залишити заявку</button>
       </section>
 
       <section class="section education">
-        <h2>Навчання</h2>
-
-        <div class="education__left-wrapper">
-          <p>Вивчення іноземної мови</p>
-          <ul>
-            <li>
-              <p>01</p>
-              <p>У групах</p>
-            </li>
-            <li>
-              <p>02</p>
-              <p>У міні-групах</p>
-            </li>
-            <li>
-              <p>03</p>
-              <p>Індивідуально</p>
-            </li>
-          </ul>
+        <div class="container">
+          <h2 class="section__title section__title--black">Навчання</h2>
+          <div class="education__left-wrapper">
+            <p>Вивчення іноземної мови</p>
+            <ul>
+              <li>
+                <p>01</p>
+                <p>У групах</p>
+              </li>
+              <li>
+                <p>02</p>
+                <p>У міні-групах</p>
+              </li>
+              <li>
+                <p>03</p>
+                <p>Індивідуально</p>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div>зображення</div>
@@ -212,32 +212,34 @@
       </section>
 
       <section class="section journey">
-        <h2>Наші подорожі</h2>
-        <p>Ми подорожуємо світом</p>
-        <p>Лондон, Греція, Болгарія, Польша, різні міста України.</p>
-        <p>
-          Гарною традицією «GiraffeClub» стали освітні подорожі студентів в
-          різні країни. Окрім вивчення англійської й покращення практичних
-          навичок мови у спеціалізованих мовних центрах світу, програми поїздок
-          передбачають щоденні розваги й екскурсії.
-        </p>
-        <div class="gallery">
-          <div class="column">
-            <div class="image image--1"></div>
-            <div class="image image--2"></div>
-          </div>
-          <div class="column">
-            <div class="row">
-              <div class="image image--3"></div>
-              <div class="image image--4"></div>
+        <div class="container">
+          <h2 class="section__title section__title--black">Наші подорожі</h2>
+          <p>Ми подорожуємо світом</p>
+          <p>Лондон, Греція, Болгарія, Польша, різні міста України.</p>
+          <p>
+            Гарною традицією «GiraffeClub» стали освітні подорожі студентів в
+            різні країни. Окрім вивчення англійської й покращення практичних
+            навичок мови у спеціалізованих мовних центрах світу, програми
+            поїздок передбачають щоденні розваги й екскурсії.
+          </p>
+          <div class="gallery">
+            <div class="column">
+              <div class="image image--1"></div>
+              <div class="image image--2"></div>
             </div>
-            <div class="row">
-              <div class="image image--5"></div>
-              <div class="column">
-                <div class="image image--6"></div>
-                <div class="row">
-                  <div class="image image--7"></div>
-                  <div class="image image--8"></div>
+            <div class="column">
+              <div class="row">
+                <div class="image image--3"></div>
+                <div class="image image--4"></div>
+              </div>
+              <div class="row">
+                <div class="image image--5"></div>
+                <div class="column">
+                  <div class="image image--6"></div>
+                  <div class="row">
+                    <div class="image image--7"></div>
+                    <div class="image image--8"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -246,90 +248,116 @@
       </section>
 
       <section class="section team">
-        <h2>Наша команда</h2>
-        <p>Найкраща команда - найкращі результати</p>
-        <ul>
-          <li>
-            <img src="./images/desktop/team-01-476.jpg" alt="member-1" />
-            <p>Ольга Мануйлова</p>
-            <p>
-              Засновниця школи. Має вищу педагогічну освіту. <br />Її профіль:
-              германські мови. <br />Перекладач. <br />Викладацький стаж: 22
-              роки
-            </p>
-          </li>
-          <li>
-            <img src="./images/desktop/team-02-400.jpg" alt="member-2" />
-            <p>Валерія Звіранська</p>
-            <p>Адміністратор</p>
-          </li>
-          <li>
-            <img src="./images/desktop/team-03-400.jpg" alt="member-3" />
-            <p>Наталія Шмалько</p>
-            <p>Адміністратор</p>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="section__title section__title--white">Наша команда</h2>
+          <p>Найкраща команда - найкращі результати</p>
+          <ul>
+            <li>
+              <img src="./images/desktop/team-01-476.jpg" alt="member-1" />
+              <p>Ольга Мануйлова</p>
+              <p>
+                Засновниця школи. Має вищу педагогічну освіту. <br />Її профіль:
+                германські мови. <br />Перекладач. <br />Викладацький стаж: 22
+                роки
+              </p>
+            </li>
+            <li>
+              <img src="./images/desktop/team-02-400.jpg" alt="member-2" />
+              <p>Валерія Звіранська</p>
+              <p>Адміністратор</p>
+            </li>
+            <li>
+              <img src="./images/desktop/team-03-400.jpg" alt="member-3" />
+              <p>Наталія Шмалько</p>
+              <p>Адміністратор</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="section reviews">
-        <h2>Відгуки</h2>
-        <p>Що кажуть про нас</p>
-
-        <ul>
-          <li class="reviews__item">
-            <div class="reviews__bg-image"></div>
-            <p>Ольга Березовська</p>
-            <p>приватний нотаріус м.Кропивницький</p>
-            <p>
-              Високий рівень викладання – викладачі прекрасні, професіонали
-              своєї справи. Звернулися до Ольги до Жирафа Клаба за
-              рекомендацією. Хочу особливо відзначити організованість,
-              дисципліну, чіткість, гарний та зручний дизайн офісу. Враження
-              лише позитивні, чудові, результат навчання – міжнародний
-              сертифікат у дочки. Рекомендую.
-            </p>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="section__title section__title--black">Відгуки</h2>
+          <p>Що кажуть про нас</p>
+          <ul>
+            <li class="reviews__item">
+              <div class="reviews__bg-image"></div>
+              <p>Ольга Березовська</p>
+              <p>приватний нотаріус м.Кропивницький</p>
+              <p>
+                Високий рівень викладання – викладачі прекрасні, професіонали
+                своєї справи. Звернулися до Ольги до Жирафа Клаба за
+                рекомендацією. Хочу особливо відзначити організованість,
+                дисципліну, чіткість, гарний та зручний дизайн офісу. Враження
+                лише позитивні, чудові, результат навчання – міжнародний
+                сертифікат у дочки. Рекомендую.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
+
+      <div class="backdrop is-hidden" data-backdrop>
+        <div class="modal">
+          <button type="button" data-modal-close>
+            <svg width="24" height="24">
+              <use href="./images/svg/sprite.svg#close-cross"></use>
+            </svg>
+          </button>
+          <p>Отримай консультацію</p>
+          <label>
+            Ім'я
+            <input type="text" />
+          </label>
+          <label>
+            Номер тел.
+            <input type="text" />
+          </label>
+
+          <button type="submit">Надіслати</button>
+        </div>
+      </div>
     </main>
     <footer>
-      <a href="./">Giraffe Club</a>
-      <address>
+      <div class="container">
+        <a href="./">Giraffe Club</a>
+        <address>
+          <ul>
+            <li>
+              <p>Номер телефону:</p>
+              <a href="tel:+380508439168">+38 050 843 91 68</a>
+            </li>
+            <li>
+              <p>Email:</p>
+              <a href="email:info@giraffe.in.ua">info@giraffe.in.ua</a>
+            </li>
+            <li>
+              <p>Адреса:</p>
+              <a
+                href=""
+                onclick="openMap()"
+                target="_blank"
+                rel="noopener noreferrer"
+                >м. Кропивницький, вул. Соборна, 1а</a
+              >
+            </li>
+          </ul>
+        </address>
+
+        <p>Соціальні мережі:</p>
         <ul>
           <li>
-            <p>Номер телефону:</p>
-            <a href="tel:+380508439168">+38 050 843 91 68</a>
+            <svg width="26" height="26">
+              <use href="./images/svg/facebook.svg"></use>
+            </svg>
           </li>
           <li>
-            <p>Email:</p>
-            <a href="email:info@giraffe.in.ua">info@giraffe.in.ua</a>
-          </li>
-          <li>
-            <p>Адреса:</p>
-            <a
-              href=""
-              onclick="openMap()"
-              target="_blank"
-              rel="noopener noreferrer"
-              >м. Кропивницький, вул. Соборна, 1а</a
-            >
+            <svg width="26" height="26">
+              <use href="./images/svg/Instagram.svg"></use>
+            </svg>
           </li>
         </ul>
-      </address>
-
-      <p>Соціальні мережі:</p>
-      <ul>
-        <li>
-          <svg width="26" height="26">
-            <use href="./images/svg/facebook.svg"></use>
-          </svg>
-        </li>
-        <li>
-          <svg width="26" height="26">
-            <use href="./images/svg/Instagram.svg"></use>
-          </svg>
-        </li>
-      </ul>
+      </div>
     </footer>
 
     <script src="./js/menu.js"></script>

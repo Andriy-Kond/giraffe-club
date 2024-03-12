@@ -42,17 +42,12 @@
 
 /* Використання шрифту */
 body {
-  font-family: "Bookman Old Style", "Times New Roman", serif;
-  font-weight: 400; /* для звичайного (regular) стилю */
+  font-family: var(--brand-main-font);
+  // font-weight: 400; /* для звичайного (regular) стилю */
 
-  background-color: rgba(222, 116, 43, 0.9);
+  background-color: var(--brand-main-color);
 }
 
 body.modal-open {
   overflow: hidden;
-}
-
-h1 {
-  font-family: "Bookman Old Style", "Times New Roman", serif;
-  font-weight: 700; /* для жирного (bold) стилю */
 }
