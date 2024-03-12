@@ -260,7 +260,8 @@ ol {
   list-style: none;
 }
 
-a {
+a,
+svg {
   text-decoration: none;
   color: inherit;
   vertical-align: bottom;
@@ -272,6 +273,10 @@ textarea {
 
 address {
   font-style: normal;
+}
+
+button {
+  padding: 0;
 }
 
 /* ========== /СКИДАННЯ СТИЛІВ ========== */
@@ -323,12 +328,94 @@ h1 {
   margin: 0 auto;
 }
 
+.navigation {
+  position: relative;
+}
+
 .navigation::after {
   display: flex;
   content: "";
+  top: 72px;
   height: 1px;
   width: 100%;
   background-color: #fcfcfc;
+  transition: background-color 250ms ease;
+}
+
+.navigation.is-open.navigation::after {
+  background-color: #df803e;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  background-color: rgb(252, 252, 252);
+}
+.menu.is-open {
+  display: flex;
+}
+
+.menu::after {
+  content: "";
+  background-image: url("../../images/mobile/giraffe-hero-140.png");
+  height: 195px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menu__title {
+  font-family: "Bookman Old Style", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: #000;
+}
+@media screen and (min-width: 359px) {
+  .menu__title {
+    display: none;
+  }
+}
+
+.menu-list {
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-list__item {
+  padding: 8px;
+  font-family: "Bookman Old Style", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #000;
+}
+
+.menu__btn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background-color: transparent;
+}
+
+.navigation.is-open .menu__icon-menu {
+  display: none;
+}
+
+.menu__icon-cross {
+  display: none;
+}
+.navigation.is-open .menu__icon-cross {
+  display: block;
+}
+
+@media screen and (max-width: 359px) {
+  .contacts {
+    display: none;
+  }
 }
 
 .about__bg-picture {

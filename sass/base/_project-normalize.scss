@@ -25,11 +25,12 @@ ol {
 }
 
 // Знімає стилізацію з <a>
-a {
+a,
+svg {
   text-decoration: none;
   color: inherit;
 
-  // delete 4px in bottom of tag <a>: display: flex; або vertical-align:bottom;
+  // delete 4px in bottom of tag <a>: або display: flex/block; або vertical-align:bottom;
   vertical-align: bottom;
 }
 
@@ -41,6 +42,10 @@ textarea {
 // прибирає нахил за замовчуванням
 address {
   font-style: normal;
+}
+
+button {
+  padding: 0;
 }
 
 /* ========== /СКИДАННЯ СТИЛІВ ========== */

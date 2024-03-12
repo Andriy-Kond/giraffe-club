@@ -1,55 +1,100 @@
 //^ Header
-// .nav {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
+.navigation {
+  position: relative;
+}
 
-//   margin-top: 26px;
-
-//   font-size: 16px;
-//   color: var(--text-paragraph-color);
-
-//   align-items: center;
-
-//   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
-//     0px 4px 4px var(--shadow);
-// }
-
-// .logo {
-//   height: 38px;
-// }
-
-// .menu {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   width: 432px;
-
-//   &--auth {
-//     width: 204px;
-//     align-items: center;
-//   }
-// }
-
-// .menu__link {
-//   &:hover,
-//   &:focus {
-//     color: rgba(255, 255, 255, 85%);
-//   }
-
-//   &--non-shadow {
-//     text-shadow: none;
-//   }
-// }
 .navigation::after {
   display: flex;
   content: "";
+  top: 72px;
   height: 1px;
   width: 100%;
   background-color: #fcfcfc;
+
+  transition: background-color 250ms ease;
+}
+
+.navigation.is-open.navigation::after {
+  background-color: #df803e;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+
+  padding-top: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+
+  background-color: rgb(252, 252, 252);
+
+  &.is-open {
+    display: flex;
+  }
+}
+
+.menu::after {
+  content: "";
+  background-image: url("../../images/mobile/giraffe-hero-140.png");
+  height: 195px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menu__title {
+  font-family: "Bookman Old Style", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: #000;
+
+  @media screen and (min-width: ($mobile - 1)) {
+    display: none;
+  }
+}
+.menu-list {
+  margin-top: 34px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-list__item {
+  padding: 8px;
+
+  font-family: "Bookman Old Style", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+
+  color: #000;
+
+  // &:not(:last-child) {
+  //   margin-bottom: 16px;
+  // }
+}
+
+.menu__btn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background-color: transparent;
+}
+
+.navigation.is-open .menu__icon-menu {
+  display: none;
+}
+
+.menu__icon-cross {
+  display: none;
+
+  .navigation.is-open & {
+    display: block;
+  }
 }
 
 .contacts {
-  // @media screen and (max-width: ) {
-  // }
+  @media screen and (max-width: ($mobile - 1)) {
+    display: none;
+  }
 }
