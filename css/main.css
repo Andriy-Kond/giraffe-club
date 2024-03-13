@@ -314,6 +314,7 @@ button {
 body {
   font-family: var(--brand-main-font);
   background-color: var(--brand-main-color);
+  color: var(--brand-black-color);
 }
 
 body.modal-open {
@@ -323,6 +324,10 @@ body.modal-open {
 .section {
   padding-top: 48px;
   padding-bottom: 64px;
+}
+
+.section--white-bg {
+  background-color: var(--brand-white-color);
 }
 
 .section__title {
@@ -340,6 +345,51 @@ body.modal-open {
   color: var(--brand-black-color);
 }
 
+.section__text {
+  margin-top: 24px;
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-family: var(--brand-second-font);
+  font-size: 14px;
+  transition: background-color 250ms ease, color 250ms ease, border 250ms ease;
+}
+@media screen and (min-width: 1920px) {
+  .btn {
+    border-radius: 10px;
+    padding: 20px 40px;
+    border-width: 2px;
+    font-weight: 300;
+    font-size: 26px;
+  }
+}
+.btn:hover {
+  background-color: var(--brand-white-color);
+  color: var(--brand-main-color);
+}
+.btn:disabled {
+  background-color: var(--disabled-btn-color);
+  color: var(--disabled-text-color);
+}
+.btn--bordered {
+  border-color: var(--brand-black-color);
+  background-color: transparent;
+}
+.btn--modal {
+  background-color: var(--brand-main-color);
+}
+.btn--modal:hover {
+  border-color: var(--brand-main-color);
+  background-color: transparent;
+  color: var(--brand-main-color);
+}
+
 .navigation {
   position: relative;
   height: 72px;
@@ -348,6 +398,7 @@ body.modal-open {
 .navigation::after {
   display: flex;
   position: absolute;
+  z-index: 2;
   content: "";
   top: 72px;
   height: 1px;
@@ -392,7 +443,6 @@ body.modal-open {
 .menu__title {
   font-weight: 600;
   font-size: 32px;
-  color: #000;
 }
 @media screen and (min-width: 360px) {
   .menu__title {
@@ -411,7 +461,6 @@ body.modal-open {
   padding: 8px;
   font-weight: 300;
   font-size: 20px;
-  color: var(--brand-black-color);
 }
 
 .menu__btn {
@@ -485,28 +534,46 @@ body.modal-open {
   font-weight: 300;
   font-size: 30px;
   line-height: 1.1;
-  color: var(--brand-black-color);
 }
 
-.btn {
+.hero__btn {
   margin-top: 16px;
-  padding: 10px 16px;
-  border-radius: 5px;
-  background-color: var(--brand-white-color);
+}
+
+.about__list {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.about__item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc((100% - 20px) / 2);
+  max-width: 150px;
+  align-items: center;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid var(--brand-black-color);
+  border-radius: 10px;
+}
+
+.about__text {
   font-family: var(--brand-second-font);
   font-size: 14px;
-  color: var(--brand-black-color);
-}
-
-.about {
-  background-color: var(--brand-white-color);
 }
 
 .about__bg-picture {
-  width: 190px;
-  height: 190px;
+  width: 66px;
+  height: 66px;
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 .about__bg-picture--calendar {
   background-image: url("../../images/svg/calendar.svg");
@@ -527,10 +594,68 @@ body.modal-open {
   background-image: url("../../images/svg/graduating-student.svg");
 }
 
-.directions__bg-image {
-  background-image: url("../../images/desktop/giraffe-directions-418.png");
-  width: 418px;
-  height: 590px;
+.directions .container {
+  position: relative;
+}
+
+.directions__list {
+  margin-top: 26px;
+}
+
+.directions__item {
+  height: 50px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-top: 1px solid var(--brand-black-color);
+}
+
+.directions__item:last-child {
+  border-bottom: 1px solid var(--brand-black-color);
+}
+
+.directions__numbering {
+  min-width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--brand-black-color);
+  border-radius: 50%;
+}
+
+.directions__text {
+  flex-grow: 1;
+  font-family: var(--brand-second-font);
+  font-size: 16px;
+}
+
+.directions__btn {
+  display: block;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1919px) {
+  .directions__bg-image {
+    position: absolute;
+    z-index: -1;
+    right: 16px;
+    bottom: -64px;
+    width: 60px;
+    height: 116px;
+    background-image: url("../../images/mobile/giraffe-directions-60.png");
+  }
+  .directions__bg-image--left {
+    right: auto;
+    left: 16px;
+    bottom: -96px;
+  }
+}
+
+.education__section-text {
+  margin-top: 0;
 }
 
 .gallery {

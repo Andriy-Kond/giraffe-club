@@ -1,4 +1,50 @@
 // ^ -== btns ==-
+.btn {
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  font-family: var(--brand-second-font);
+  font-size: 14px;
+
+  transition: background-color 250ms ease, color 250ms ease, border 250ms ease;
+
+  @media screen and (min-width: $desktop) {
+    border-radius: 10px;
+    padding: 20px 40px;
+
+    border-width: 2px;
+
+    font-weight: 300;
+    font-size: 26px;
+  }
+
+  &:hover {
+    background-color: var(--brand-white-color);
+    color: var(--brand-main-color);
+  }
+
+  &:disabled {
+    background-color: var(--disabled-btn-color);
+    color: var(--disabled-text-color);
+  }
+
+  &--bordered {
+    border-color: var(--brand-black-color);
+    background-color: transparent;
+  }
+
+  &--modal {
+    background-color: var(--brand-main-color);
+  }
+
+  &--modal:hover {
+    border-color: var(--brand-main-color);
+    background-color: transparent;
+    color: var(--brand-main-color);
+  }
+}
+
 // .btn {
 //   display: flex;
 //   justify-content: center;

@@ -1,5 +1,58 @@
+.directions .container {
+  position: relative;
+}
+.directions__list {
+  margin-top: 26px;
+}
+.directions__item {
+  height: 50px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-top: 1px solid var(--brand-black-color);
+}
+.directions__item:last-child {
+  border-bottom: 1px solid var(--brand-black-color);
+}
+
+.directions__numbering {
+  min-width: 38px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--brand-black-color);
+  border-radius: 50%;
+}
+.directions__text {
+  flex-grow: 1;
+  font-family: var(--brand-second-font);
+  font-size: 16px;
+}
+
+.directions__btn {
+  display: block;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .directions__bg-image {
-  background-image: url("../../images/desktop/giraffe-directions-418.png");
-  width: 418px;
-  height: 590px;
+  @media screen and (max-width: ($desktop - 1)) {
+    position: absolute;
+    z-index: -1;
+    right: 16px;
+    bottom: -64px;
+    width: 60px;
+    height: 116px;
+    background-image: url("../../images/mobile/giraffe-directions-60.png");
+
+    &--left {
+      right: auto;
+      left: 16px;
+      bottom: -96px;
+    }
+  }
 }

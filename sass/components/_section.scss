@@ -3,6 +3,10 @@
   padding-bottom: 64px;
 }
 
+.section--white-bg {
+  background-color: var(--brand-white-color);
+}
+
 .section__title {
   font-family: var(--brand-second-font);
   font-weight: 700;
@@ -19,4 +23,12 @@
   &--black {
     color: var(--brand-black-color);
   }
+}
+
+.section__text {
+  margin-top: 24px;
+  font-weight: 300;
+  font-size: 24px;
+
+  text-align: center;
 }
