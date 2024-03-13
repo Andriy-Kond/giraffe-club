@@ -1,3 +1,61 @@
+.education::after {
+  content: "";
+  display: block;
+  background-image: url("../../images/mobile/education-languages-320.jpg");
+  width: 320px;
+  height: 243px;
+
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.education__list {
+  margin-top: 24px;
+}
+
+.education__item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 8px;
+
+  font-weight: 300;
+  font-size: 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &--flex-center {
+  }
+}
+
+.education__detailed {
+  position: relative;
+  left: 47px;
+
+  width: 272px;
+
+  font-family: var(--brand-second-font);
+  font-size: 16px;
+}
+
+.education__numbering {
+  min-width: 38px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--brand-black-color);
+  border-radius: 50%;
+}
+
+.education__section {
+  padding-bottom: 40px;
+}
 .education__section-text {
-  margin-top: 0;
+  margin-top: 40px;
 }

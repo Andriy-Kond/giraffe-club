@@ -1,18 +1,24 @@
 .directions .container {
   position: relative;
 }
+
 .directions__list {
   margin-top: 26px;
+  font-family: var(--brand-second-font);
 }
+
 .directions__item {
   height: 50px;
   display: flex;
   gap: 8px;
   align-items: center;
   border-top: 1px solid var(--brand-black-color);
-}
-.directions__item:last-child {
-  border-bottom: 1px solid var(--brand-black-color);
+
+  font-size: 16px;
+
+  &:last-child {
+    border-bottom: 1px solid var(--brand-black-color);
+  }
 }
 
 .directions__numbering {
@@ -25,11 +31,6 @@
 
   border: 1px solid var(--brand-black-color);
   border-radius: 50%;
-}
-.directions__text {
-  flex-grow: 1;
-  font-family: var(--brand-second-font);
-  font-size: 16px;
 }
 
 .directions__btn {
