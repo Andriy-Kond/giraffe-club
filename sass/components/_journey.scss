@@ -1,64 +1,132 @@
+.journey__text {
+  margin-top: 24px;
+
+  font-family: var(--brand-second-font);
+  font-size: 16px;
+}
+
+// .gallery {
+//   margin-top: 24px;
+
+//   display: flex;
+//   flex-wrap: wrap;
+//   column-gap: 20px;
+//   row-gap: 8px;
+// }
+
+// .column {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .row {
+//   display: flex;
+//   flex-direction: row;
+// }
+
 .gallery {
-  display: flex;
+  position: relative;
+
+  margin-top: 24px;
+
+  display: inline-flex;
+  width: 100%;
   flex-wrap: wrap;
-  gap: 20px;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 8px;
 }
 
 .image {
-  flex: 1 0 auto;
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
+  border-radius: 4px;
+
   &--1 {
-    background-image: url("../images/desktop/journey-1-405.jpg");
-    width: 405px;
-    height: 500px;
+    width: 150px;
+    height: 171px;
+    background-image: url("../../images/mobile/journey-1-150.jpg");
   }
   &--2 {
-    background-image: url("../images/desktop/journey-2-405.jpg");
-    width: 405px;
-    height: 500px;
+    background-image: url("../../images/mobile/journey-2-150.jpg");
+    width: 150px;
+    height: 171px;
   }
   &--3 {
-    background-image: url("../images/desktop/journey-3-678.jpg");
-    width: 678px;
-    height: 392px;
+    background-image: url("../../images/mobile/journey-3-320.jpg");
+    width: 320px;
+    height: 156px;
   }
   &--4 {
-    background-image: url("../images/desktop/journey-4-557.jpg");
-    width: 557px;
-    height: 392px;
+    background-image: url("../../images/mobile/journey-4-320.jpg");
+    width: 320px;
+    height: 72px;
   }
   &--5 {
-    background-image: url("../images/desktop/journey-5-524.jpg");
-    width: 524px;
-    height: 608px;
+    background-image: url("../../images/mobile/journey-5-150.jpg");
+    width: 150px;
+    height: 164px;
   }
   &--6 {
-    background-image: url("../images/desktop/journey-6-711.jpg");
-    width: 711px;
-    height: 392px;
+    background-image: url("../../images/mobile/journey-7-150.jpg");
+    width: 150px;
+    height: 130px;
   }
   &--7 {
-    background-image: url("../images/desktop/journey-7-286.jpg");
-    width: 286px;
-    height: 196px;
+    background-image: url("../../images/mobile/journey-6-150.jpg");
+    width: 150px;
+    height: 72px;
   }
   &--8 {
-    background-image: url("../images/desktop/journey-8-405.jpg");
-    width: 408px;
-    height: 196px;
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+
+    background-image: url("../../images/mobile/journey-8-150.jpg");
+    width: 150px;
+    height: 106px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    border-radius: 10px;
+    &--1 {
+      background-image: url("../../images/desktop/journey-1-405.jpg");
+      width: 405px;
+      height: 500px;
+    }
+    &--2 {
+      background-image: url("../../images/desktop/journey-2-405.jpg");
+      width: 405px;
+      height: 500px;
+    }
+    &--3 {
+      background-image: url("../../images/desktop/journey-3-678.jpg");
+      width: 678px;
+      height: 392px;
+    }
+    &--4 {
+      background-image: url("../../images/desktop/journey-4-557.jpg");
+      width: 557px;
+      height: 392px;
+    }
+    &--5 {
+      background-image: url("../../images/desktop/journey-5-524.jpg");
+      width: 524px;
+      height: 608px;
+    }
+    &--6 {
+      background-image: url("../../images/desktop/journey-6-711.jpg");
+      width: 711px;
+      height: 392px;
+    }
+    &--7 {
+      background-image: url("../../images/desktop/journey-7-286.jpg");
+      width: 286px;
+      height: 196px;
+    }
+    &--8 {
+      background-image: url("../../images/desktop/journey-8-405.jpg");
+      width: 408px;
+      height: 196px;
+    }
   }
 }
