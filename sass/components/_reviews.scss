@@ -1,5 +1,46 @@
-.reviews__bg-image {
-  width: 78px;
-  height: 107px;
-  background-image: url("../../images/desktop/giraffe-about-76.png");
+.reviews__list {
+  font-family: var(--brand-second-font);
+  font-size: 16px;
+}
+
+.reviews__item {
+  width: 320px;
+  height: 332px;
+  padding: 16px;
+  padding-bottom: 40px;
+
+  border-radius: 12px;
+  background-color: var(--brand-main-color);
+
+  &::after {
+    width: 78px;
+    height: 107px;
+    background-image: url("../../images/desktop/giraffe-about-76.png");
+  }
+}
+
+.reviews__name {
+  margin-bottom: 8px;
+
+  text-align: center;
+  font-family: var(--brand-main-font);
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.reviews__position {
+  padding-bottom: 8px;
+
+  &::after {
+    content: "";
+    width: 100%;
+    margin-top: 8px;
+
+    display: block;
+
+    border-bottom: 1px solid var(--brand-white-color);
+  }
+}
+
+.reviews__text {
 }
