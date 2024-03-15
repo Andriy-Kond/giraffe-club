@@ -37,3 +37,29 @@
   gap: 10px;
   justify-content: center;
 }
+
+.socials__item {
+  transition: scale 250ms ease;
+
+  &:hover,
+  &:focus {
+    scale: 1.1;
+  }
+}
+
+.socials__link {
+  transition: fill 250ms ease;
+  .socials__item:hover &,
+  .socials__item:focus & {
+    fill: var(--brand-white-color);
+  }
+}
+
+.footer__link {
+  transition: color 250ms ease;
+
+  &:hover,
+  &:focus {
+    color: var(--brand-white-color);
+  }
+}

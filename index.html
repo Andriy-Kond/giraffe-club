@@ -73,7 +73,7 @@
               Офіційний сертифікований центр підготовки до міжнародних екзаменів
               Cambrige
             </p>
-            <button type="button" class="btn hero__btn">
+            <button type="button" class="btn hero__btn" data-modal-open>
               Отримати консультацію
             </button>
           </div>
@@ -163,7 +163,7 @@
           </ul>
           <div class="directions__bg-image directions__bg-image--left"></div>
           <div class="directions__bg-image"></div>
-          <button class="btn btn--bordered directions__btn">
+          <button class="btn btn--bordered directions__btn" data-modal-open>
             Залишити заявку
           </button>
         </div>
@@ -363,26 +363,33 @@
         </div>
       </section>
 
-      <!-- <div class="backdrop is-hidden" data-backdrop>
-        <div class="modal">
-          <button type="button" data-modal-close>
+      <div class="backdrop is-hidden" data-backdrop>
+        <form name="consultation" class="modal">
+          <button type="button" class="modal__close-btn" data-modal-close>
             <svg width="24" height="24">
               <use href="./images/svg/sprite.svg#close-cross"></use>
             </svg>
           </button>
-          <p>Отримай консультацію</p>
-          <label>
-            Ім'я
-            <input type="text" />
-          </label>
-          <label>
-            Номер тел.
-            <input type="text" />
-          </label>
-
-          <button type="submit">Надіслати</button>
-        </div>
-      </div> -->
+          <p class="modal__title">Отримай консультацію</p>
+          <ul class="modal__list">
+            <li class="modal__item">
+              <label class="modal__label">
+                <span>Ім’я</span>
+                <input type="text" name="tel" class="modal__input" />
+              </label>
+            </li>
+            <li class="modal__item">
+              <label class="modal__label">
+                <span>Номер тел.</span>
+                <input type="text" name="tel" class="modal__input" />
+              </label>
+            </li>
+          </ul>
+          <button type="submit" class="btn btn--modal modal__submit-btn">
+            Надіслати
+          </button>
+        </form>
+      </div>
     </main>
     <footer class="footer">
       <div class="container">
@@ -391,11 +398,15 @@
           <ul class="footer__list">
             <li class="footer__item">
               <p>Номер телефону:</p>
-              <a href="tel:+380508439168">+38 050 843 91 68</a>
+              <a class="footer__link" href="tel:+380508439168"
+                >+38 050 843 91 68</a
+              >
             </li>
             <li class="footer__item">
               <p>Email:</p>
-              <a href="email:info@giraffe.in.ua">info@giraffe.ua</a>
+              <a href="email:info@giraffe.in.ua" class="footer__link"
+                >info@giraffe.ua</a
+              >
             </li>
             <li class="footer__item">
               <p>Адреса:</p>
@@ -404,28 +415,31 @@
                 onclick="openMap()"
                 target="_blank"
                 rel="noopener noreferrer"
+                class="footer__link"
                 >м. Кропивницький, вул. Соборна, 1а</a
               >
             </li>
             <li class="footer__item footer__item--socials">
               <p>Соціальні мережі:</p>
               <ul class="socials">
-                <li>
+                <li class="socials__item">
                   <a
                     href="https://www.facebook.com/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="socials__link"
                   >
                     <svg width="26px" height="26px">
                       <use href="./images/svg/sprite.svg#facebook"></use>
                     </svg>
                   </a>
                 </li>
-                <li>
+                <li class="socials__item">
                   <a
                     href="https://www.instagram.com/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="socials__link"
                   >
                     <svg width="26px" height="26px">
                       <use href="./images/svg/sprite.svg#instagram"></use>
@@ -436,20 +450,6 @@
             </li>
           </ul>
         </address>
-
-        <!-- <p>Соціальні мережі:</p>
-        <ul>
-          <li>
-            <svg width="26" height="26">
-              <use href="./images/svg/facebook.svg"></use>
-            </svg>
-          </li>
-          <li>
-            <svg width="26" height="26">
-              <use href="./images/svg/Instagram.svg"></use>
-            </svg>
-          </li>
-        </ul> -->
       </div>
     </footer>
 
