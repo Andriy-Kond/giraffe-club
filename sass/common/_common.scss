@@ -1,3 +1,15 @@
+body {
+  font-family: var(--brand-main-font);
+  // font-weight: 400; /* для звичайного (regular) стилю */
+
+  background-color: var(--brand-main-color);
+  color: var(--brand-black-color);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 // body {
 //   background-color: var(--brand-bg-color);
 //   color: var(--text-title-color);
@@ -41,14 +53,3 @@
 // }
 
 /* Використання шрифту */
-body {
-  font-family: var(--brand-main-font);
-  // font-weight: 400; /* для звичайного (regular) стилю */
-
-  background-color: var(--brand-main-color);
-  color: var(--brand-black-color);
-}
-
-body.modal-open {
-  overflow: hidden;
-}

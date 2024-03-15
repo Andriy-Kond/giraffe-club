@@ -7,6 +7,8 @@
   height: 100%;
   padding: 40px;
 
+  overflow-y: scroll;
+
   background-color: rgba(0, 0, 0, 0.7);
 
   opacity: 1;
@@ -21,7 +23,7 @@
 .modal {
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 80px;
   padding-left: 20px;
   padding-right: 20px;
@@ -33,6 +35,15 @@
 .modal__close-btn {
   background-color: transparent;
   margin-left: auto;
+
+  cursor: pointer;
+
+  transition: scale 250ms ease;
+
+  &:hover,
+  &:focus {
+    scale: 1.1;
+  }
 }
 
 .modal__title {
