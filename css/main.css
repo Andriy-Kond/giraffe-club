@@ -764,7 +764,7 @@ body.modal-open {
 .image--8 {
   position: absolute;
   bottom: 0;
-  right: 8px;
+  right: 0;
   background-image: url("../../images/mobile/journey-8-150.jpg");
   width: 150px;
   height: 106px;
@@ -896,4 +896,42 @@ body.modal-open {
   margin-top: 8px;
   display: block;
   border-bottom: 1px solid var(--brand-white-color);
+}
+
+.footer {
+  padding-top: 48px;
+  padding-bottom: 40px;
+}
+
+.footer__logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.footer__list {
+  position: relative;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: var(--brand-second-font);
+  font-size: 14px;
+}
+
+.footer__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__item--socials {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */
