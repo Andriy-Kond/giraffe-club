@@ -598,6 +598,11 @@ body.modal-open {
   background-position: center top;
   background-origin: border-box;
 }
+@media screen and (min-width: 1920px) {
+  .hero::after {
+    background-image: url("../../images/svg/polygon-desktop.svg");
+  }
+}
 
 .hero__wrapper {
   display: block;
@@ -610,8 +615,17 @@ body.modal-open {
   display: block;
   height: 195px;
   background-image: url("../../images/mobile/giraffe-hero-140.png");
+  background-image: -webkit-image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
+  background-image: image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
   background-repeat: no-repeat;
   background-position: center;
+}
+@media screen and (min-width: 1920px) {
+  .hero__wrapper::after {
+    background-image: url("../../images/desktop/giraffe-hero-539.png");
+    background-image: -webkit-image-set(url("../../images/desktop/giraffe-hero-539.png") 1x, url("../../images/desktop/giraffe-hero-1078-2x.png") 2x, url("../../images/desktop/giraffe-hero-1617-3x.png") 3x);
+    background-image: image-set(url("../../images/desktop/giraffe-hero-539.png") 1x, url("../../images/desktop/giraffe-hero-1078-2x.png") 2x, url("../../images/desktop/giraffe-hero-1617-3x.png") 3x);
+  }
 }
 
 .hero__title {
@@ -725,32 +739,48 @@ body.modal-open {
   margin-right: auto;
 }
 
-@media screen and (max-width: 1919px) {
+.directions__bg-image {
+  position: absolute;
+  z-index: -1;
+  right: 16px;
+  bottom: -64px;
+  width: 60px;
+  height: 116px;
+  background-image: url("../../images/mobile/giraffe-directions-60.png");
+  background-image: -webkit-image-set(url("../../images/mobile/giraffe-directions-60.png") 1x, url("../../images/mobile/giraffe-directions-120.png") 2x, url("../../images/mobile/giraffe-directions-180.png") 3x);
+  background-image: image-set(url("../../images/mobile/giraffe-directions-60.png") 1x, url("../../images/mobile/giraffe-directions-120.png") 2x, url("../../images/mobile/giraffe-directions-180.png") 3x);
+}
+@media screen and (min-width: 1920px) {
   .directions__bg-image {
-    position: absolute;
-    z-index: -1;
-    right: 16px;
-    bottom: -64px;
-    width: 60px;
-    height: 116px;
-    background-image: url("../../images/mobile/giraffe-directions-60.png");
+    background-image: url("../../images/desktop//giraffe-directions-418.png");
+    background-image: -webkit-image-set(url("../../images/desktop/giraffe-directions-418.png") 1x, url("../../images/desktop/giraffe-directions-836.png") 2x, url("../../images/desktop/giraffe-directions-1254.png") 3x);
+    background-image: image-set(url("../../images/desktop/giraffe-directions-418.png") 1x, url("../../images/desktop/giraffe-directions-836.png") 2x, url("../../images/desktop/giraffe-directions-1254.png") 3x);
   }
-  .directions__bg-image--left {
-    right: auto;
-    left: 16px;
-    bottom: -96px;
-  }
+}
+.directions__bg-image--left {
+  right: auto;
+  left: 16px;
+  bottom: -96px;
 }
 
 .education::after {
   content: "";
-  display: block;
-  background-image: url("../../images/mobile/education-languages-320.jpg");
   width: 320px;
   height: 243px;
   margin-top: 32px;
   margin-left: auto;
   margin-right: auto;
+  display: block;
+  background-image: url("../../images/mobile/education-languages-320.jpg");
+  background-image: -webkit-image-set(url("../../images/mobile/education-languages-320.jpg") 1x, url("../../images/mobile/education-languages-640.jpg") 2x, url("../../images/mobile/education-languages-960.jpg") 3x);
+  background-image: image-set(url("../../images/mobile/education-languages-320.jpg") 1x, url("../../images/mobile/education-languages-640.jpg") 2x, url("../../images/mobile/education-languages-960.jpg") 3x);
+}
+@media screen and (min-width: 1920px) {
+  .education::after {
+    background-image: url("../../images/desktop/education-languages-956.jpg");
+    background-image: -webkit-image-set(url("../../images/desktop/education-languages-956.jpg") 1x, url("../../images/desktop/education-languages-1912.jpg") 2x, url("../../images/desktop/education-languages-2868.jpg") 3x);
+    background-image: image-set(url("../../images/desktop/education-languages-956.jpg") 1x, url("../../images/desktop/education-languages-1912.jpg") 2x, url("../../images/desktop/education-languages-2868.jpg") 3x);
+  }
 }
 
 .education__list {
@@ -821,88 +851,120 @@ body.modal-open {
   width: 150px;
   height: 171px;
   background-image: url("../../images/mobile/journey-1-150.jpg");
+  background-image: -webkit-image-set(url("../../images/mobile/journey-1-150.jpg") 1x, url("../../images/mobile/journey-1-300-2x.jpg") 2x, url("../../images/mobile/journey-1-450-3x.jpg") 3x);
+  background-image: image-set(url("../../images/mobile/journey-1-150.jpg") 1x, url("../../images/mobile/journey-1-300-2x.jpg") 2x, url("../../images/mobile/journey-1-450-3x.jpg") 3x);
 }
 .image--2 {
-  background-image: url("../../images/mobile/journey-2-150.jpg");
   width: 150px;
   height: 171px;
+  background-image: url("../../images/mobile/journey-2-150.jpg");
+  background-image: -webkit-image-set(url("../../images/mobile/journey-2-150.jpg") 1x, url("../../images/mobile/journey-2-300-2x.jpg") 2x, url("../../images/mobile/journey-2-450-3x.jpg") 3x);
+  background-image: image-set(url("../../images/mobile/journey-2-150.jpg") 1x, url("../../images/mobile/journey-2-300-2x.jpg") 2x, url("../../images/mobile/journey-2-450-3x.jpg") 3x);
 }
 .image--3 {
-  background-image: url("../../images/mobile/journey-3-320.jpg");
   width: 320px;
   height: 156px;
+  background-image: url("../../images/mobile/journey-3-320.jpg");
+  background-image: -webkit-image-set(url("../../images/mobile/journey-3-320.jpg") 1x, url("../../images/mobile/journey-3-640-2x.jpg") 2x, url("../../images/mobile/journey-3-960-3x.jpg") 3x);
+  background-image: image-set(url("../../images/mobile/journey-3-320.jpg") 1x, url("../../images/mobile/journey-3-640-2x.jpg") 2x, url("../../images/mobile/journey-3-960-3x.jpg") 3x);
 }
 .image--4 {
-  background-image: url("../../images/mobile/journey-4-320.jpg");
   width: 320px;
   height: 72px;
+  background-image: url("../../images/mobile/journey-4-320.jpg");
+  background-image: -webkit-image-set(url("../../images/mobile/journey-4-320.jpg") 1x, url("../../images/mobile/journey-4-640-2x.jpg") 2x, url("../../images/mobile/journey-4-960-3x.jpg") 3x);
+  background-image: image-set(url("../../images/mobile/journey-4-320.jpg") 1x, url("../../images/mobile/journey-4-640-2x.jpg") 2x, url("../../images/mobile/journey-4-960-3x.jpg") 3x);
 }
 .image--5 {
-  background-image: url("../../images/mobile/journey-5-150.jpg");
   width: 150px;
   height: 164px;
+  background-image: url("../../images/mobile/journey-5-150.jpg");
+  background-image: -webkit-image-set(url("../../images/mobile/journey-5-150.jpg") 1x, url("../../images/mobile/journey-5-300-2x.jpg") 2x, url("../../images/mobile/journey-5-450-3x.jpg") 3x);
+  background-image: image-set(url("../../images/mobile/journey-5-150.jpg") 1x, url("../../images/mobile/journey-5-300-2x.jpg") 2x, url("../../images/mobile/journey-5-450-3x.jpg") 3x);
 }
 .image--6 {
-  background-image: url("../../images/mobile/journey-7-150.jpg");
   width: 150px;
   height: 130px;
+  background-image: url("../../images/mobile/journey-7-150.jpg");
+  background-image: -webkit-image-set(url("../../images/mobile/journey-6-150.jpg") 1x, url("../../images/mobile/journey-6-300-2x.jpg") 2x, url("../../images/mobile/journey-6-450-3x.jpg") 3x);
+  background-image: image-set(url("../../images/mobile/journey-6-150.jpg") 1x, url("../../images/mobile/journey-6-300-2x.jpg") 2x, url("../../images/mobile/journey-6-450-3x.jpg") 3x);
 }
 .image--7 {
-  background-image: url("../../images/mobile/journey-6-150.jpg");
   width: 150px;
   height: 72px;
+  background-image: url("../../images/mobile/journey-6-150.jpg");
+  background-image: -webkit-image-set(url("../../images/mobile/journey-7-150.jpg") 1x, url("../../images/mobile/journey-7-300-2x.jpg") 2x, url("../../images/mobile/journey-7-450-3x.jpg") 3x);
+  background-image: image-set(url("../../images/mobile/journey-7-150.jpg") 1x, url("../../images/mobile/journey-7-300-2x.jpg") 2x, url("../../images/mobile/journey-7-450-3x.jpg") 3x);
 }
 .image--8 {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-image: url("../../images/mobile/journey-8-150.jpg");
   width: 150px;
   height: 106px;
+  background-image: url("../../images/mobile/journey-8-150.jpg");
+  background-image: -webkit-image-set(url("../../images/mobile/journey-8-150.jpg") 1x, url("../../images/mobile/journey-8-300-2x.jpg") 2x, url("../../images/mobile/journey-8-450-3x.jpg") 3x);
+  background-image: image-set(url("../../images/mobile/journey-8-150.jpg") 1x, url("../../images/mobile/journey-8-300-2x.jpg") 2x, url("../../images/mobile/journey-8-450-3x.jpg") 3x);
 }
 @media screen and (min-width: 1920px) {
   .image {
     border-radius: 10px;
   }
   .image--1 {
-    background-image: url("../../images/desktop/journey-1-405.jpg");
     width: 405px;
     height: 500px;
+    background-image: url("../../images/desktop/journey-1-405.jpg");
+    background-image: -webkit-image-set(url("../../images/desktop/journey-1-405.jpg") 1x, url("../../images/desktop/journey-1-810-2x.jpg") 2x, url("../../images/desktop/journey-1-1215-3x.jpg") 3x);
+    background-image: image-set(url("../../images/desktop/journey-1-405.jpg") 1x, url("../../images/desktop/journey-1-810-2x.jpg") 2x, url("../../images/desktop/journey-1-1215-3x.jpg") 3x);
   }
   .image--2 {
-    background-image: url("../../images/desktop/journey-2-405.jpg");
     width: 405px;
     height: 500px;
+    background-image: url("../../images/desktop/journey-2-405.jpg");
+    background-image: -webkit-image-set(url("../../images/desktop/journey-2-405.jpg") 1x, url("../../images/desktop/journey-2-810-2x.jpg") 2x, url("../../images/desktop/journey-2-1215-3x.jpg") 3x);
+    background-image: image-set(url("../../images/desktop/journey-2-405.jpg") 1x, url("../../images/desktop/journey-2-810-2x.jpg") 2x, url("../../images/desktop/journey-2-1215-3x.jpg") 3x);
   }
   .image--3 {
-    background-image: url("../../images/desktop/journey-3-678.jpg");
     width: 678px;
     height: 392px;
+    background-image: url("../../images/desktop/journey-3-678.jpg");
+    background-image: -webkit-image-set(url("../../images/desktop/journey-3-678.jpg") 1x, url("../../images/desktop/journey-3-1356-2x.jpg") 2x, url("../../images/desktop/journey-3-2034-3x.jpg") 3x);
+    background-image: image-set(url("../../images/desktop/journey-3-678.jpg") 1x, url("../../images/desktop/journey-3-1356-2x.jpg") 2x, url("../../images/desktop/journey-3-2034-3x.jpg") 3x);
   }
   .image--4 {
-    background-image: url("../../images/desktop/journey-4-557.jpg");
     width: 557px;
     height: 392px;
+    background-image: url("../../images/desktop/journey-4-557.jpg");
+    background-image: -webkit-image-set(url("../../images/desktop/journey-4-557.jpg") 1x, url("../../images/desktop/journey-4-1114-2x.jpg") 2x, url("../../images/desktop/journey-4-1671-3x.jpg") 3x);
+    background-image: image-set(url("../../images/desktop/journey-4-557.jpg") 1x, url("../../images/desktop/journey-4-1114-2x.jpg") 2x, url("../../images/desktop/journey-4-1671-3x.jpg") 3x);
   }
   .image--5 {
-    background-image: url("../../images/desktop/journey-5-524.jpg");
     width: 524px;
     height: 608px;
+    background-image: url("../../images/desktop/journey-5-524.jpg");
+    background-image: -webkit-image-set(url("../../images/desktop/journey-5-524.jpg") 1x, url("../../images/desktop/journey-5-1048-2x.jpg") 2x, url("../../images/desktop/journey-5-1572-3x.jpg") 3x);
+    background-image: image-set(url("../../images/desktop/journey-5-524.jpg") 1x, url("../../images/desktop/journey-5-1048-2x.jpg") 2x, url("../../images/desktop/journey-5-1572-3x.jpg") 3x);
   }
   .image--6 {
-    background-image: url("../../images/desktop/journey-6-711.jpg");
     width: 711px;
     height: 392px;
+    background-image: url("../../images/desktop/journey-6-711.jpg");
+    background-image: -webkit-image-set(url("../../images/desktop/journey-6-711.jpg") 1x, url("../../images/desktop/journey-6-1422-2x.jpg") 2x, url("../../images/desktop/journey-6-2133-3x.jpg") 3x);
+    background-image: image-set(url("../../images/desktop/journey-6-711.jpg") 1x, url("../../images/desktop/journey-6-1422-2x.jpg") 2x, url("../../images/desktop/journey-6-2133-3x.jpg") 3x);
   }
   .image--7 {
-    background-image: url("../../images/desktop/journey-7-286.jpg");
     width: 286px;
     height: 196px;
+    background-image: url("../../images/desktop/journey-7-286.jpg");
+    background-image: -webkit-image-set(url("../../images/desktop/journey-7-286.jpg") 1x, url("../../images/desktop/journey-7-572-2x.jpg") 2x, url("../../images/desktop/journey-7-858-3x.jpg") 3x);
+    background-image: image-set(url("../../images/desktop/journey-7-286.jpg") 1x, url("../../images/desktop/journey-7-572-2x.jpg") 2x, url("../../images/desktop/journey-7-858-3x.jpg") 3x);
   }
   .image--8 {
-    background-image: url("../../images/desktop/journey-8-405.jpg");
     width: 408px;
     height: 196px;
+    background-image: url("../../images/desktop/journey-8-405.jpg");
+    background-image: -webkit-image-set(url("../../images/desktop/journey-8-405.jpg") 1x, url("../../images/desktop/journey-8-810-2x.jpg") 2x, url("../../images/desktop/journey-8-1215-3x.jpg") 3x);
+    background-image: image-set(url("../../images/desktop/journey-8-405.jpg") 1x, url("../../images/desktop/journey-8-810-2x.jpg") 2x, url("../../images/desktop/journey-8-1215-3x.jpg") 3x);
   }
 }
 

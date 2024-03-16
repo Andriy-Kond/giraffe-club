@@ -18,6 +18,10 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-origin: border-box;
+
+  @media screen and (min-width: $desktop) {
+    background-image: url("../../images/svg/polygon-desktop.svg");
+  }
 }
 
 .hero__wrapper {
@@ -32,8 +36,22 @@
   height: 195px;
 
   background-image: url("../../images/mobile/giraffe-hero-140.png");
+  background-image: image-set(
+    url("../../images/mobile/giraffe-hero-140.png") 1x,
+    url("../../images/mobile/giraffe-hero-280-2x.png") 2x,
+    url("../../images/mobile/giraffe-hero-420-3x.png") 3x
+  );
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (min-width: $desktop) {
+    background-image: url("../../images/desktop/giraffe-hero-539.png");
+    background-image: image-set(
+      url("../../images/desktop/giraffe-hero-539.png") 1x,
+      url("../../images/desktop/giraffe-hero-1078-2x.png") 2x,
+      url("../../images/desktop/giraffe-hero-1617-3x.png") 3x
+    );
+  }
 }
 
 .hero__title {

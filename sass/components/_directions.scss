@@ -41,19 +41,31 @@
 }
 
 .directions__bg-image {
-  @media screen and (max-width: ($desktop - 1)) {
-    position: absolute;
-    z-index: -1;
-    right: 16px;
-    bottom: -64px;
-    width: 60px;
-    height: 116px;
-    background-image: url("../../images/mobile/giraffe-directions-60.png");
+  position: absolute;
+  z-index: -1;
+  right: 16px;
+  bottom: -64px;
+  width: 60px;
+  height: 116px;
+  background-image: url("../../images/mobile/giraffe-directions-60.png");
+  background-image: image-set(
+    url("../../images/mobile/giraffe-directions-60.png") 1x,
+    url("../../images/mobile/giraffe-directions-120.png") 2x,
+    url("../../images/mobile/giraffe-directions-180.png") 3x
+  );
 
-    &--left {
-      right: auto;
-      left: 16px;
-      bottom: -96px;
-    }
+  @media screen and (min-width: $desktop) {
+    background-image: url("../../images/desktop//giraffe-directions-418.png");
+    background-image: image-set(
+      url("../../images/desktop/giraffe-directions-418.png") 1x,
+      url("../../images/desktop/giraffe-directions-836.png") 2x,
+      url("../../images/desktop/giraffe-directions-1254.png") 3x
+    );
+  }
+
+  &--left {
+    right: auto;
+    left: 16px;
+    bottom: -96px;
   }
 }

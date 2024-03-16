@@ -1,13 +1,29 @@
 .education::after {
   content: "";
-  display: block;
-  background-image: url("../../images/mobile/education-languages-320.jpg");
   width: 320px;
   height: 243px;
-
   margin-top: 32px;
   margin-left: auto;
   margin-right: auto;
+
+  display: block;
+
+  background-image: url("../../images/mobile/education-languages-320.jpg");
+
+  background-image: image-set(
+    url("../../images/mobile/education-languages-320.jpg") 1x,
+    url("../../images/mobile/education-languages-640.jpg") 2x,
+    url("../../images/mobile/education-languages-960.jpg") 3x
+  );
+
+  @media screen and (min-width: $desktop) {
+    background-image: url("../../images/desktop/education-languages-956.jpg");
+    background-image: image-set(
+      url("../../images/desktop/education-languages-956.jpg") 1x,
+      url("../../images/desktop/education-languages-1912.jpg") 2x,
+      url("../../images/desktop/education-languages-2868.jpg") 3x
+    );
+  }
 }
 
 .education__list {
