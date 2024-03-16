@@ -48,14 +48,15 @@
 
 .menu::after {
   content: "";
+  height: 195px;
+
   background-image: url("../../images/mobile/giraffe-hero-140.png");
   background-image: image-set(
     url("../../images/mobile/giraffe-hero-140.png") 1x,
     url("../../images/mobile/giraffe-hero-280-2x.png") 2x,
     url("../../images/mobile/giraffe-hero-420-3x.png") 3x
   );
-
-  height: 195px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 

@@ -273,20 +273,37 @@
           <p class="section__text">Найкраща команда - найкращі результати</p>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                srcset="
-                  ./images/mobile/team-01-94.jpg         94w,
-                  ./images/mobile/team-01-188-2x.jpg    188w,
-                  ./images/mobile/team-01-282-3x.jpg    282w,
-                  ./images/desktop/team-01-476.jpg      476w,
-                  ./images/desktop/team-01-952-2x.jpg   952w,
-                  ./images/desktop/team-01-1428-3x.jpg 1428w
-                "
-                sizes="25vw"
-                src="./images/mobile/team-01-94.jpg"
-                alt="member-1"
-                class="team__photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/team-01-94.webp         94w,
+                    ./images/mobile/team-01-188-2x.webp    188w,
+                    ./images/mobile/team-01-282-3x.webp    282w,
+                    ./images/desktop/team-01-476.webp      476w,
+                    ./images/desktop/team-01-952-2x.webp   952w,
+                    ./images/desktop/team-01-1428-3x.webp 1428w
+                  "
+                  sizes="25vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-01-94.jpg         94w,
+                    ./images/mobile/team-01-188-2x.jpg    188w,
+                    ./images/mobile/team-01-282-3x.jpg    282w,
+                    ./images/desktop/team-01-476.jpg      476w,
+                    ./images/desktop/team-01-952-2x.jpg   952w,
+                    ./images/desktop/team-01-1428-3x.jpg 1428w
+                  "
+                  sizes="25vw"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/mobile/team-01-94.jpg"
+                  alt="member-1"
+                  class="team__photo"
+                />
+              </picture>
               <p class="team__name">Ольга Мануйлова</p>
               <div class="team__position">
                 <p>Засновниця школи.</p>
@@ -298,38 +315,74 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                srcset="
-                  ./images/mobile/team-02-94.jpg         94w,
-                  ./images/mobile/team-02-188-2x.jpg    188w,
-                  ./images/mobile/team-02-282-3x.jpg    282w,
-                  ./images/desktop/team-02-400.jpg      476w,
-                  ./images/desktop/team-02-800-2x.jpg   952w,
-                  ./images/desktop/team-02-1200-3x.jpg 1428w
-                "
-                sizes="25vw"
-                src="./images/mobile/team-02-94.jpg"
-                alt="member-2"
-                class="team__photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/team-02-94.webp         94w,
+                    ./images/mobile/team-02-188-2x.webp    188w,
+                    ./images/mobile/team-02-282-3x.webp    282w,
+                    ./images/desktop/team-02-400.webp      476w,
+                    ./images/desktop/team-02-800-2x.webp   952w,
+                    ./images/desktop/team-02-1200-3x.webp 1428w
+                  "
+                  type="image/webp"
+                  sizes="25vw"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-02-94.jpg         94w,
+                    ./images/mobile/team-02-188-2x.jpg    188w,
+                    ./images/mobile/team-02-282-3x.jpg    282w,
+                    ./images/desktop/team-02-400.jpg      476w,
+                    ./images/desktop/team-02-800-2x.jpg   952w,
+                    ./images/desktop/team-02-1200-3x.jpg 1428w
+                  "
+                  type="image/jpeg"
+                  sizes="25vw"
+                />
+
+                <img
+                  src="./images/mobile/team-02-94.jpg"
+                  alt="member-2"
+                  class="team__photo"
+                />
+              </picture>
               <p class="team__name">Валерія Звіранська</p>
               <p class="team__position">Адміністратор</p>
             </li>
             <li class="team__item">
-              <img
-                srcset="
-                  ./images/mobile/team-03-94.jpg         94w,
-                  ./images/mobile/team-03-188-2x.jpg    188w,
-                  ./images/mobile/team-03-282-3x.jpg    282w,
-                  ./images/desktop/team-03-400.jpg      476w,
-                  ./images/desktop/team-03-800-2x.jpg   952w,
-                  ./images/desktop/team-03-1200-3x.jpg 1428w
-                "
-                sizes="25vw"
-                src="./images/mobile/team-03-94.jpg"
-                alt="member-3"
-                class="team__photo"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/team-03-94.webp         94w,
+                    ./images/mobile/team-03-188-2x.webp    188w,
+                    ./images/mobile/team-03-282-3x.webp    282w,
+                    ./images/desktop/team-03-400.webp      476w,
+                    ./images/desktop/team-03-800-2x.webp   952w,
+                    ./images/desktop/team-03-1200-3x.webp 1428w
+                  "
+                  sizes="25vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-03-94.jpg         94w,
+                    ./images/mobile/team-03-188-2x.jpg    188w,
+                    ./images/mobile/team-03-282-3x.jpg    282w,
+                    ./images/desktop/team-03-400.jpg      476w,
+                    ./images/desktop/team-03-800-2x.jpg   952w,
+                    ./images/desktop/team-03-1200-3x.jpg 1428w
+                  "
+                  sizes="25vw"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/mobile/team-03-94.jpg"
+                  alt="member-3"
+                  class="team__photo"
+                />
+              </picture>
               <p class="team__name">Наталія Шмалько</p>
               <p class="team__position">Адміністратор</p>
             </li>

@@ -31,9 +31,10 @@
 
 .hero__wrapper::after {
   content: "";
-  margin-top: 4px;
-  display: block;
   height: 195px;
+  margin-top: 4px;
+
+  display: block;
 
   background-image: url("../../images/mobile/giraffe-hero-140.png");
   background-image: image-set(
@@ -41,6 +42,7 @@
     url("../../images/mobile/giraffe-hero-280-2x.png") 2x,
     url("../../images/mobile/giraffe-hero-420-3x.png") 3x
   );
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 

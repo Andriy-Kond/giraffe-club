@@ -45,14 +45,17 @@
   z-index: -1;
   right: 16px;
   bottom: -64px;
+
   width: 60px;
   height: 116px;
+
   background-image: url("../../images/mobile/giraffe-directions-60.png");
   background-image: image-set(
     url("../../images/mobile/giraffe-directions-60.png") 1x,
     url("../../images/mobile/giraffe-directions-120-2x.png") 2x,
     url("../../images/mobile/giraffe-directions-180-3x.png") 3x
   );
+  background-size: 60px 116px;
 
   @media screen and (min-width: $desktop) {
     background-image: url("../../images/desktop//giraffe-directions-418.png");
