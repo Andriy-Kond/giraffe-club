@@ -517,9 +517,18 @@ body.modal-open {
 .menu::after {
   content: "";
   background-image: url("../../images/mobile/giraffe-hero-140.png");
+  background-image: -webkit-image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
+  background-image: image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
   height: 195px;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media screen and (min-width: 1920px) {
+  .menu::after {
+    background-image: url("../../images/desktop/giraffe-hero-539.png");
+    background-image: -webkit-image-set(url("../../images/desktop/giraffe-hero-539.png") 1x, url("../../images/desktop/giraffe-hero-1078-2x.png") 2x, url("../../images/desktop/giraffe-hero-1617-3x.png") 3x);
+    background-image: image-set(url("../../images/desktop/giraffe-hero-539.png") 1x, url("../../images/desktop/giraffe-hero-1078-2x.png") 2x, url("../../images/desktop/giraffe-hero-1617-3x.png") 3x);
+  }
 }
 
 .menu__title {
@@ -747,14 +756,14 @@ body.modal-open {
   width: 60px;
   height: 116px;
   background-image: url("../../images/mobile/giraffe-directions-60.png");
-  background-image: -webkit-image-set(url("../../images/mobile/giraffe-directions-60.png") 1x, url("../../images/mobile/giraffe-directions-120.png") 2x, url("../../images/mobile/giraffe-directions-180.png") 3x);
-  background-image: image-set(url("../../images/mobile/giraffe-directions-60.png") 1x, url("../../images/mobile/giraffe-directions-120.png") 2x, url("../../images/mobile/giraffe-directions-180.png") 3x);
+  background-image: -webkit-image-set(url("../../images/mobile/giraffe-directions-60.png") 1x, url("../../images/mobile/giraffe-directions-120-2x.png") 2x, url("../../images/mobile/giraffe-directions-180-3x.png") 3x);
+  background-image: image-set(url("../../images/mobile/giraffe-directions-60.png") 1x, url("../../images/mobile/giraffe-directions-120-2x.png") 2x, url("../../images/mobile/giraffe-directions-180-3x.png") 3x);
 }
 @media screen and (min-width: 1920px) {
   .directions__bg-image {
     background-image: url("../../images/desktop//giraffe-directions-418.png");
-    background-image: -webkit-image-set(url("../../images/desktop/giraffe-directions-418.png") 1x, url("../../images/desktop/giraffe-directions-836.png") 2x, url("../../images/desktop/giraffe-directions-1254.png") 3x);
-    background-image: image-set(url("../../images/desktop/giraffe-directions-418.png") 1x, url("../../images/desktop/giraffe-directions-836.png") 2x, url("../../images/desktop/giraffe-directions-1254.png") 3x);
+    background-image: -webkit-image-set(url("../../images/desktop/giraffe-directions-418.png") 1x, url("../../images/desktop/giraffe-directions-836-2x.png") 2x, url("../../images/desktop/giraffe-directions-1254-3x.png") 3x);
+    background-image: image-set(url("../../images/desktop/giraffe-directions-418.png") 1x, url("../../images/desktop/giraffe-directions-836-2x.png") 2x, url("../../images/desktop/giraffe-directions-1254-3x.png") 3x);
   }
 }
 .directions__bg-image--left {
@@ -772,14 +781,14 @@ body.modal-open {
   margin-right: auto;
   display: block;
   background-image: url("../../images/mobile/education-languages-320.jpg");
-  background-image: -webkit-image-set(url("../../images/mobile/education-languages-320.jpg") 1x, url("../../images/mobile/education-languages-640.jpg") 2x, url("../../images/mobile/education-languages-960.jpg") 3x);
-  background-image: image-set(url("../../images/mobile/education-languages-320.jpg") 1x, url("../../images/mobile/education-languages-640.jpg") 2x, url("../../images/mobile/education-languages-960.jpg") 3x);
+  background-image: -webkit-image-set(url("../../images/mobile/education-languages-320.jpg") 1x, url("../../images/mobile/education-languages-640-2x.jpg") 2x, url("../../images/mobile/education-languages-960-3x.jpg") 3x);
+  background-image: image-set(url("../../images/mobile/education-languages-320.jpg") 1x, url("../../images/mobile/education-languages-640-2x.jpg") 2x, url("../../images/mobile/education-languages-960-3x.jpg") 3x);
 }
 @media screen and (min-width: 1920px) {
   .education::after {
     background-image: url("../../images/desktop/education-languages-956.jpg");
-    background-image: -webkit-image-set(url("../../images/desktop/education-languages-956.jpg") 1x, url("../../images/desktop/education-languages-1912.jpg") 2x, url("../../images/desktop/education-languages-2868.jpg") 3x);
-    background-image: image-set(url("../../images/desktop/education-languages-956.jpg") 1x, url("../../images/desktop/education-languages-1912.jpg") 2x, url("../../images/desktop/education-languages-2868.jpg") 3x);
+    background-image: -webkit-image-set(url("../../images/desktop/education-languages-956.jpg") 1x, url("../../images/desktop/education-languages-1912-2x.jpg") 2x, url("../../images/desktop/education-languages-2868-3x.jpg") 3x);
+    background-image: image-set(url("../../images/desktop/education-languages-956.jpg") 1x, url("../../images/desktop/education-languages-1912-2x.jpg") 2x, url("../../images/desktop/education-languages-2868-3x.jpg") 3x);
   }
 }
 

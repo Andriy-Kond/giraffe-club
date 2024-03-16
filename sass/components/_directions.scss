@@ -50,16 +50,16 @@
   background-image: url("../../images/mobile/giraffe-directions-60.png");
   background-image: image-set(
     url("../../images/mobile/giraffe-directions-60.png") 1x,
-    url("../../images/mobile/giraffe-directions-120.png") 2x,
-    url("../../images/mobile/giraffe-directions-180.png") 3x
+    url("../../images/mobile/giraffe-directions-120-2x.png") 2x,
+    url("../../images/mobile/giraffe-directions-180-3x.png") 3x
   );
 
   @media screen and (min-width: $desktop) {
     background-image: url("../../images/desktop//giraffe-directions-418.png");
     background-image: image-set(
       url("../../images/desktop/giraffe-directions-418.png") 1x,
-      url("../../images/desktop/giraffe-directions-836.png") 2x,
-      url("../../images/desktop/giraffe-directions-1254.png") 3x
+      url("../../images/desktop/giraffe-directions-836-2x.png") 2x,
+      url("../../images/desktop/giraffe-directions-1254-3x.png") 3x
     );
   }
 

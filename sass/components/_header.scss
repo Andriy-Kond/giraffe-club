@@ -49,9 +49,24 @@
 .menu::after {
   content: "";
   background-image: url("../../images/mobile/giraffe-hero-140.png");
+  background-image: image-set(
+    url("../../images/mobile/giraffe-hero-140.png") 1x,
+    url("../../images/mobile/giraffe-hero-280-2x.png") 2x,
+    url("../../images/mobile/giraffe-hero-420-3x.png") 3x
+  );
+
   height: 195px;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (min-width: $desktop) {
+    background-image: url("../../images/desktop/giraffe-hero-539.png");
+    background-image: image-set(
+      url("../../images/desktop/giraffe-hero-539.png") 1x,
+      url("../../images/desktop/giraffe-hero-1078-2x.png") 2x,
+      url("../../images/desktop/giraffe-hero-1617-3x.png") 3x
+    );
+  }
 }
 
 .menu__title {
