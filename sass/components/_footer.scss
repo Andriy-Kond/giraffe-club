@@ -48,10 +48,10 @@
 }
 
 .socials__link {
-  transition: fill 250ms ease;
+  transition: scale 250ms ease;
   .socials__item:hover &,
   .socials__item:focus & {
-    fill: var(--brand-white-color);
+    scale: 1.01;
   }
 }
 

@@ -309,6 +309,12 @@ button {
   padding: 0 20px;
   margin: 0 auto;
 }
+@media screen and (min-width: 1920px) {
+  .container {
+    width: 1920px;
+    padding: 0 120px;
+  }
+}
 
 body {
   font-family: var(--brand-main-font);
@@ -475,54 +481,77 @@ body.modal-open {
 }
 
 .navigation {
-  position: relative;
-  height: 72px;
-}
-
-.navigation::after {
-  display: flex;
-  position: absolute;
-  z-index: 2;
-  content: "";
-  top: 72px;
-  height: 1px;
-  width: 100%;
-  background-color: var(--brand-white-color);
-  transition: background-color 250ms ease;
-}
-
-.navigation.is-open.navigation::after {
-  background-color: var(--brand-main-color);
-}
-
-.menu {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 16px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 40px;
-  background-color: var(--brand-white-color);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 250ms ease;
 }
-.menu.is-open {
-  display: flex;
-  opacity: 1;
-  visibility: visible;
+@media screen and (max-width: 1919px) {
+  .navigation {
+    position: relative;
+    height: 72px;
+    border-bottom: 1px solid var(--brand-white-color);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .navigation {
+    display: flex;
+    padding-top: 40px;
+  }
 }
 
+.navigation__container {
+  position: relative;
+  width: 360px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1920px) {
+  .navigation__container {
+    position: static;
+    width: 1920px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--brand-white-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms ease;
+  }
+  .menu.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.menu::before {
+  content: "";
+  position: absolute;
+  top: 72px;
+  left: 0;
+  z-index: 2;
+  height: 1px;
+  width: 100%;
+  background-color: var(--brand-main-color);
+}
 .menu::after {
   content: "";
   height: 195px;
   background-image: url("../../images/mobile/giraffe-hero-140.png");
   background-image: -webkit-image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
   background-image: image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -538,7 +567,7 @@ body.modal-open {
   font-weight: 600;
   font-size: 32px;
 }
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 1920px) {
   .menu__title {
     display: none;
   }
@@ -550,6 +579,13 @@ body.modal-open {
   flex-direction: column;
   gap: 16px;
 }
+@media screen and (min-width: 1920px) {
+  .menu-list {
+    margin-top: 0;
+    flex-direction: row;
+    gap: 12px;
+  }
+}
 
 .menu-list__item {
   padding: 8px;
@@ -560,6 +596,11 @@ body.modal-open {
 .menu-list__item:hover, .menu-list__item:focus {
   scale: 1.01;
   color: var(--brand-main-color);
+}
+@media screen and (min-width: 1920px) {
+  .menu-list__item {
+    font-size: 26px;
+  }
 }
 
 .menu__btn {
@@ -574,6 +615,11 @@ body.modal-open {
 .menu__btn:hover, .menu__btn:focus {
   scale: 1.1;
 }
+@media screen and (min-width: 1920px) {
+  .menu__btn {
+    display: none;
+  }
+}
 
 .navigation.is-open .menu__icon-menu {
   display: none;
@@ -586,10 +632,30 @@ body.modal-open {
   display: block;
 }
 
-@media screen and (max-width: 359px) {
+.contacts {
+  display: none;
+}
+@media screen and (min-width: 1920px) {
   .contacts {
-    display: none;
+    display: flex;
+    gap: 24px;
   }
+}
+
+.contacts__item {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+}
+.contacts__item--phone-icon {
+  background-image: url("../../images/svg/phone.svg");
+}
+.contacts__item--location-icon {
+  background-image: url("../../images/svg/location.svg");
+}
+.contacts__item--email-icon {
+  width: 44px;
+  background-image: url("../../images/svg/email.svg");
 }
 
 .hero {
@@ -629,7 +695,7 @@ body.modal-open {
   background-image: url("../../images/mobile/giraffe-hero-140.png");
   background-image: -webkit-image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
   background-image: image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1129,10 +1195,10 @@ body.modal-open {
 }
 
 .socials__link {
-  transition: fill 250ms ease;
+  transition: scale 250ms ease;
 }
 .socials__item:hover .socials__link, .socials__item:focus .socials__link {
-  fill: var(--brand-white-color);
+  scale: 1.01;
 }
 
 .footer__link {

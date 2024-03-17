@@ -16,53 +16,61 @@
   </head>
   <body>
     <header>
-      <nav class="navigation" data-menu-nav>
-        <!-- aria-expanded - для доступності, каже чи розкрито меню. За замовчуванням false (закрите) 
+      <!-- aria-expanded - для доступності, каже чи розкрито меню. За замовчуванням false (закрите) 
         aria-controls - явно зв'язує два елементи-->
-        <button
-          type="button"
-          class="menu__btn"
-          aria-expanded="false"
-          aria-controls="menu-list"
-          data-menu-button
-        >
-          <svg width="48" height="48" aria-label="Відкривач мобільного меню">
-            <use
-              href="./images/svg/sprite.svg#burger-menu"
-              class="menu__icon-menu"
-            ></use>
-            <use
-              href="./images/svg/sprite.svg#close-cross-x48"
-              class="menu__icon-cross"
-            ></use>
-          </svg>
-        </button>
-        <div class="menu" data-menu>
-          <p class="menu__title">Giraffe Club</p>
+      <nav class="navigation" data-menu-nav>
+        <div class="navigation__container">
+          <div class="menu" data-menu>
+            <p class="menu__title">Giraffe Club</p>
 
-          <ul class="menu-list" id="menu-list">
-            <li class="menu-list__item"><a href="">Про нас</a></li>
-            <li class="menu-list__item"><a href="">Напрямки роботи</a></li>
-            <li class="menu-list__item"><a href="">Навчання</a></li>
-            <li class="menu-list__item"><a href="">Наші подорожі</a></li>
-            <li class="menu-list__item"><a href="">Наша команда</a></li>
-            <li class="menu-list__item"><a href="">Відгуки</a></li>
+            <ul class="menu-list" id="menu-list">
+              <li class="menu-list__item"><a href="">Про нас</a></li>
+              <li class="menu-list__item"><a href="">Напрямки роботи</a></li>
+              <li class="menu-list__item"><a href="">Навчання</a></li>
+              <li class="menu-list__item"><a href="">Наші подорожі</a></li>
+              <li class="menu-list__item"><a href="">Наша команда</a></li>
+              <li class="menu-list__item"><a href="">Відгуки</a></li>
+            </ul>
+          </div>
+
+          <button
+            type="button"
+            class="menu__btn"
+            aria-expanded="false"
+            aria-controls="menu-list"
+            data-menu-button
+          >
+            <svg width="48" height="48" aria-label="Відкривач мобільного меню">
+              <use
+                href="./images/svg/sprite.svg#burger-menu"
+                class="menu__icon-menu"
+              ></use>
+              <use
+                href="./images/svg/sprite.svg#close-cross-x48"
+                class="menu__icon-cross"
+              ></use>
+            </svg>
+          </button>
+
+          <ul class="contacts">
+            <li class="contacts__item contacts__item--phone-icon">
+              <a href="tel:+380672333333"></a>
+            </li>
+            <li class="contacts__item contacts__item--location-icon">
+              <a
+                href=""
+                onclick="openMap()"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+              </a>
+            </li>
+            <li class="contacts__item contacts__item--email-icon">
+              <a href="email:a@mail.com"> </a>
+            </li>
           </ul>
         </div>
       </nav>
-      <ul class="contacts">
-        <li><a href="tel:+380672333333">телефон</a></li>
-        <li>
-          <a
-            href=""
-            onclick="openMap()"
-            target="_blank"
-            rel="noopener noreferrer"
-            >локація</a
-          >
-        </li>
-        <li><a href="email:a@mail.com">email</a></li>
-      </ul>
     </header>
     <main>
       <section class="section hero">
@@ -314,7 +322,7 @@
                 <p>Викладацький стаж: 22 роки</p>
               </div>
             </li>
-            <li class="team__item">
+            <!-- <li class="team__item">
               <picture>
                 <source
                   srcset="
@@ -385,7 +393,7 @@
               </picture>
               <p class="team__name">Наталія Шмалько</p>
               <p class="team__position">Адміністратор</p>
-            </li>
+            </li> -->
           </ul>
           <button type="button" class="arrow"></button>
         </div>
