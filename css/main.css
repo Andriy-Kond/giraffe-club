@@ -407,7 +407,7 @@ body.modal-open {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 40px;
+  padding: 40px 20px;
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 1;
@@ -670,6 +670,7 @@ body.modal-open {
 @media screen and (min-width: 1920px) {
   .hero {
     padding-top: 90px;
+    padding-bottom: 115px;
   }
 }
 
@@ -708,9 +709,9 @@ body.modal-open {
 @media screen and (min-width: 1920px) {
   .hero__bg::before {
     left: auto;
-    right: -60px;
+    right: 0px;
     display: block;
-    width: 982px;
+    width: 914px;
     height: 1080px;
     background-image: url("../../images/svg/polygon-desktop.svg");
   }
@@ -893,7 +894,7 @@ body.modal-open {
   bottom: -96px;
 }
 
-.education::after {
+.education__list::after {
   content: "";
   width: 320px;
   height: 243px;
@@ -907,7 +908,7 @@ body.modal-open {
   background-size: 320px, 243px;
 }
 @media screen and (min-width: 1920px) {
-  .education::after {
+  .education__list::after {
     background-image: url("../../images/desktop/education-languages-956.jpg");
     background-image: -webkit-image-set(url("../../images/desktop/education-languages-956.jpg") 1x, url("../../images/desktop/education-languages-1912-2x.jpg") 2x, url("../../images/desktop/education-languages-2868-3x.jpg") 3x);
     background-image: image-set(url("../../images/desktop/education-languages-956.jpg") 1x, url("../../images/desktop/education-languages-1912-2x.jpg") 2x, url("../../images/desktop/education-languages-2868-3x.jpg") 3x);

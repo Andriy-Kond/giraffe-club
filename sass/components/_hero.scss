@@ -4,6 +4,7 @@
 
   @media screen and (min-width: $desktop) {
     padding-top: 90px;
+    padding-bottom: 115px;
   }
 }
 
@@ -47,9 +48,9 @@
   @media screen and (min-width: $desktop) {
     // position: static;
     left: auto;
-    right: -60px;
+    right: 0px;
     display: block;
-    width: 982px;
+    width: 914px;
     height: 1080px;
     background-image: url("../../images/svg/polygon-desktop.svg");
   }
