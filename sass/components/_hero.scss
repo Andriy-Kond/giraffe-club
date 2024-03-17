@@ -1,9 +1,34 @@
 .hero {
   position: relative;
   padding-top: 32px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 90px;
+  }
 }
 
-.hero::after {
+.hero__container {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.hero__wrapper {
+  display: block;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 875px;
+    margin-top: 64px;
+    text-align: left;
+  }
+}
+
+.hero__bg {
+}
+
+.hero__bg::before {
   content: "";
 
   position: absolute;
@@ -20,16 +45,17 @@
   background-origin: border-box;
 
   @media screen and (min-width: $desktop) {
+    // position: static;
+    left: auto;
+    right: -60px;
+    display: block;
+    width: 982px;
+    height: 1080px;
     background-image: url("../../images/svg/polygon-desktop.svg");
   }
 }
 
-.hero__wrapper {
-  display: block;
-  text-align: center;
-}
-
-.hero__wrapper::after {
+.hero__bg::after {
   content: "";
   height: 195px;
   margin-top: 4px;
@@ -47,6 +73,10 @@
   background-position: center;
 
   @media screen and (min-width: $desktop) {
+    width: 539px;
+    height: 761px;
+    margin-top: 0;
+
     background-image: url("../../images/desktop/giraffe-hero-539.png");
     background-image: image-set(
       url("../../images/desktop/giraffe-hero-539.png") 1x,
@@ -61,18 +91,33 @@
   font-size: 52px;
   letter-spacing: -1px;
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 90px;
+    text-align: left;
+  }
 }
 
 .hero__text {
   margin-top: 8px;
 
   text-align: left;
-
   font-weight: 300;
   font-size: 30px;
   line-height: 1.1;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 24px;
+
+    font-size: 50px;
+    line-height: 1.3;
+  }
 }
 
 .hero__btn {
   margin-top: 16px;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 90px;
+  }
 }
