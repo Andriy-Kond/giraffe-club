@@ -4,6 +4,7 @@
   margin: 0 auto;
 
   @media screen and (min-width: $desktop) {
+    max-width: $desktop;
     width: $desktop;
     padding: 0 120px;
   }

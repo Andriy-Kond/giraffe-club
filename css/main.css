@@ -311,6 +311,7 @@ button {
 }
 @media screen and (min-width: 1920px) {
   .container {
+    max-width: 1920px;
     width: 1920px;
     padding: 0 120px;
   }
@@ -510,6 +511,10 @@ body.modal-open {
   }
 }
 
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
 @media screen and (max-width: 1919px) {
   .menu {
     position: absolute;
@@ -523,7 +528,6 @@ body.modal-open {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 40px;
-    display: flex;
     flex-direction: column;
     background-color: var(--brand-white-color);
     opacity: 0;
@@ -535,27 +539,29 @@ body.modal-open {
     visibility: visible;
   }
 }
-.menu::before {
-  content: "";
-  position: absolute;
-  top: 72px;
-  left: 0;
-  z-index: 2;
-  height: 1px;
-  width: 100%;
-  background-color: var(--brand-main-color);
+@media screen and (max-width: 1919px) {
+  .menu::before {
+    content: "";
+    position: absolute;
+    top: 72px;
+    left: 0;
+    z-index: 2;
+    height: 1px;
+    width: 100%;
+    background-color: var(--brand-main-color);
+  }
+  .menu::after {
+    content: "";
+    height: 195px;
+    background-image: url("../../images/mobile/giraffe-hero-140.png");
+    background-image: -webkit-image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
+    background-image: image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
-.menu::after {
-  content: "";
-  height: 195px;
-  background-image: url("../../images/mobile/giraffe-hero-140.png");
-  background-image: -webkit-image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
-  background-image: image-set(url("../../images/mobile/giraffe-hero-140.png") 1x, url("../../images/mobile/giraffe-hero-280-2x.png") 2x, url("../../images/mobile/giraffe-hero-420-3x.png") 3x);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-@media screen and (min-width: 1920px) {
+@media screen and (max-width: 1919px) and (min-width: 1920px) {
   .menu::after {
     background-image: url("../../images/desktop/giraffe-hero-539.png");
     background-image: -webkit-image-set(url("../../images/desktop/giraffe-hero-539.png") 1x, url("../../images/desktop/giraffe-hero-1078-2x.png") 2x, url("../../images/desktop/giraffe-hero-1617-3x.png") 3x);

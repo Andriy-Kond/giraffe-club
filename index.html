@@ -20,17 +20,37 @@
         aria-controls - явно зв'язує два елементи-->
       <nav class="navigation" data-menu-nav>
         <div class="navigation__container">
-          <div class="menu" data-menu>
-            <p class="menu__title">Giraffe Club</p>
+          <div class="container">
+            <div class="menu" data-menu>
+              <p class="menu__title">Giraffe Club</p>
 
-            <ul class="menu-list" id="menu-list">
-              <li class="menu-list__item"><a href="">Про нас</a></li>
-              <li class="menu-list__item"><a href="">Напрямки роботи</a></li>
-              <li class="menu-list__item"><a href="">Навчання</a></li>
-              <li class="menu-list__item"><a href="">Наші подорожі</a></li>
-              <li class="menu-list__item"><a href="">Наша команда</a></li>
-              <li class="menu-list__item"><a href="">Відгуки</a></li>
-            </ul>
+              <ul class="menu-list" id="menu-list">
+                <li class="menu-list__item"><a href="">Про нас</a></li>
+                <li class="menu-list__item"><a href="">Напрямки роботи</a></li>
+                <li class="menu-list__item"><a href="">Навчання</a></li>
+                <li class="menu-list__item"><a href="">Наші подорожі</a></li>
+                <li class="menu-list__item"><a href="">Наша команда</a></li>
+                <li class="menu-list__item"><a href="">Відгуки</a></li>
+              </ul>
+
+              <ul class="contacts">
+                <li class="contacts__item contacts__item--phone-icon">
+                  <a href="tel:+380672333333"></a>
+                </li>
+                <li class="contacts__item contacts__item--location-icon">
+                  <a
+                    href=""
+                    onclick="openMap()"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                  </a>
+                </li>
+                <li class="contacts__item contacts__item--email-icon">
+                  <a href="email:a@mail.com"> </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <button
@@ -51,24 +71,6 @@
               ></use>
             </svg>
           </button>
-
-          <ul class="contacts">
-            <li class="contacts__item contacts__item--phone-icon">
-              <a href="tel:+380672333333"></a>
-            </li>
-            <li class="contacts__item contacts__item--location-icon">
-              <a
-                href=""
-                onclick="openMap()"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-              </a>
-            </li>
-            <li class="contacts__item contacts__item--email-icon">
-              <a href="email:a@mail.com"> </a>
-            </li>
-          </ul>
         </div>
       </nav>
     </header>
