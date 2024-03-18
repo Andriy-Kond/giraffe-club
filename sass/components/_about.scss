@@ -3,16 +3,23 @@
 
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 64px;
+    row-gap: 40px;
+    column-gap: 82px;
+  }
 }
 
 .about__item {
   display: flex;
   flex-direction: column;
   flex-basis: calc((100% - 20px) / 2);
-  max-width: 150px;
+  // width: 150px;
   align-items: center;
+  justify-content: center;
 
   text-align: center;
 
@@ -23,11 +30,32 @@
 
   border: 1px solid var(--brand-black-color);
   border-radius: 10px;
+
+  @media screen and (min-width: $desktop) {
+    min-width: 408px;
+    // height: 408px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    flex-basis: calc((100% - 22 * 82px) / 3);
+  }
 }
 
 .about__text {
+  margin-top: 4px;
   font-family: var(--brand-second-font);
   font-size: 14px;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 16px;
+    font-family: var(--brand-main-font);
+    font-weight: 300;
+    font-size: 34px;
+    line-height: 1.3;
+  }
 }
 
 .about__bg-picture {
@@ -36,6 +64,11 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: $desktop) {
+    width: 226px;
+    height: 226px;
+  }
 
   &--calendar {
     background-image: url("../../images/svg/calendar.svg");
