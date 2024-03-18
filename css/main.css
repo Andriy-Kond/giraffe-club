@@ -891,10 +891,6 @@ body.modal-open {
   background-image: url("../../images/svg/graduating-student.svg");
 }
 
-.directions .container {
-  position: relative;
-}
-
 .directions__list {
   margin-top: 26px;
   display: flex;
@@ -981,7 +977,11 @@ body.modal-open {
   }
 }
 
-.directions__bg-image {
+.directions__bg {
+  position: relative;
+}
+.directions__bg::before, .directions__bg::after {
+  content: "";
   position: absolute;
   z-index: -1;
   right: 16px;
@@ -994,7 +994,7 @@ body.modal-open {
   background-size: 60px 116px;
 }
 @media screen and (min-width: 1920px) {
-  .directions__bg-image {
+  .directions__bg::before, .directions__bg::after {
     width: 418px;
     height: 590px;
     right: 0;
@@ -1005,13 +1005,12 @@ body.modal-open {
     background-size: contain;
   }
 }
-.directions__bg-image--left {
-  right: auto;
+.directions__bg::after {
   left: 16px;
   bottom: -96px;
 }
 @media screen and (min-width: 1920px) {
-  .directions__bg-image--left {
+  .directions__bg::after {
     left: 0;
     bottom: 150px;
   }
