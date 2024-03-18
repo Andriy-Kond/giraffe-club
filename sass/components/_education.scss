@@ -139,13 +139,12 @@
 
   @media screen and (min-width: $desktop) {
     position: absolute;
+    top: 128px;
+    right: 120px;
 
     width: 956px;
     height: 505px;
     margin-top: 0;
-
-    top: 128px;
-    right: 0;
 
     background-image: url("../../images/desktop/education-languages-956.jpg");
     background-image: image-set(
