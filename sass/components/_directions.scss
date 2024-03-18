@@ -4,11 +4,24 @@
 
 .directions__list {
   margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
   font-family: var(--brand-second-font);
+
+  @media screen and (min-width: $desktop) {
+    width: 824px;
+    margin-top: 64px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .directions__item {
   height: 50px;
+  padding-top: 8px;
+
   display: flex;
   gap: 8px;
   align-items: center;
@@ -18,6 +31,21 @@
 
   &:last-child {
     border-bottom: 1px solid var(--brand-black-color);
+    padding-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+      border-width: 2px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 82px;
+    gap: 34px;
+    border-width: 2px;
+
+    font-weight: 300;
+    font-size: 34px;
+    line-height: 1.3;
   }
 }
 
@@ -31,6 +59,24 @@
 
   border: 1px solid var(--brand-black-color);
   border-radius: 50%;
+
+  @media screen and (min-width: $desktop) {
+    min-width: 66px;
+    height: 66px;
+
+    border-width: 2px;
+  }
+}
+
+.directions--mobile-view {
+  @media screen and (max-width: ($desktop - 1)) {
+    display: block;
+  }
+}
+.directions--desktop-view {
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
 }
 
 .directions__btn {
@@ -38,6 +84,10 @@
   margin-top: 24px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 64px;
+  }
 }
 
 .directions__bg-image {
@@ -58,17 +108,28 @@
   background-size: 60px 116px;
 
   @media screen and (min-width: $desktop) {
+    width: 418px;
+    height: 590px;
+    right: 0;
+    bottom: 150px;
+
     background-image: url("../../images/desktop//giraffe-directions-418.png");
     background-image: image-set(
       url("../../images/desktop/giraffe-directions-418.png") 1x,
       url("../../images/desktop/giraffe-directions-836-2x.png") 2x,
       url("../../images/desktop/giraffe-directions-1254-3x.png") 3x
     );
+    background-size: contain;
   }
 
   &--left {
     right: auto;
     left: 16px;
     bottom: -96px;
+
+    @media screen and (min-width: $desktop) {
+      left: 0;
+      bottom: 150px;
+    }
   }
 }
