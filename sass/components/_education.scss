@@ -1,3 +1,122 @@
+.education__list {
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 40px;
+
+    row-gap: 40px;
+  }
+}
+
+.education__list--row {
+  margin-top: 20px;
+  @media screen and (min-width: $desktop) {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 105px;
+  }
+}
+
+.education__item {
+  display: flex;
+  align-items: baseline;
+  // flex-wrap: wrap;
+  column-gap: 8px;
+  // row-gap: 16px;
+
+  font-weight: 300;
+  font-size: 20px;
+
+  @media screen and (min-width: $desktop) {
+    column-gap: 20px;
+    // row-gap: 40px;
+    flex-basis: calc((100% - 2 * 105px) / 3);
+    font-size: 34px;
+    line-height: 1.3;
+  }
+
+  // &:not(:last-child) {
+  //   margin-bottom: 16px;
+
+  //   @media screen and (min-width: $desktop) {
+  //     margin-bottom: 40px;
+  //   }
+  // }
+}
+
+.education__detailed {
+  // position: relative;
+  // left: 47px;
+
+  // width: 272px;
+
+  margin-top: 8px;
+
+  font-family: var(--brand-second-font);
+  font-size: 16px;
+
+  @media screen and (min-width: $desktop) {
+    font-family: var(--brand-main-font);
+    font-weight: 300;
+    font-size: 26px;
+  }
+}
+
+.education--new-row {
+  display: block;
+}
+
+.education__numbering {
+  min-width: 38px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--brand-black-color);
+  border-radius: 50%;
+
+  @media screen and (min-width: $desktop) {
+    min-width: 66px;
+    height: 66px;
+
+    border-width: 2px;
+  }
+}
+
+.education__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.education__section {
+  padding-bottom: 40px;
+}
+
+.education__section-text-top {
+  @media screen and (min-width: $desktop) {
+    margin-top: 98px;
+  }
+}
+
+.education__section-text-bottom {
+  margin-top: 40px;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 188px;
+  }
+}
+
+.education__bg {
+  position: relative;
+}
+
 .education__bg::after {
   content: "";
   width: 100%;
@@ -19,6 +138,15 @@
   background-repeat: no-repeat;
 
   @media screen and (min-width: $desktop) {
+    position: absolute;
+
+    width: 956px;
+    height: 505px;
+    margin-top: 0;
+
+    top: 128px;
+    right: 0;
+
     background-image: url("../../images/desktop/education-languages-956.jpg");
     background-image: image-set(
       url("../../images/desktop/education-languages-956.jpg") 1x,
@@ -26,54 +154,4 @@
       url("../../images/desktop/education-languages-2868-3x.jpg") 3x
     );
   }
-}
-
-.education__list {
-  margin-top: 24px;
-}
-
-.education__item {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  column-gap: 8px;
-
-  font-weight: 300;
-  font-size: 20px;
-
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
-
-  &--flex-center {
-  }
-}
-
-.education__detailed {
-  position: relative;
-  left: 47px;
-
-  width: 272px;
-
-  font-family: var(--brand-second-font);
-  font-size: 16px;
-}
-
-.education__numbering {
-  min-width: 38px;
-  height: 38px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: 1px solid var(--brand-black-color);
-  border-radius: 50%;
-}
-
-.education__section {
-  padding-bottom: 40px;
-}
-.education__section-text {
-  margin-top: 40px;
 }

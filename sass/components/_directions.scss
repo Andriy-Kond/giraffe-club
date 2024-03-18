@@ -64,12 +64,12 @@
   }
 }
 
-.directions--mobile-view {
+.directions--new-row-mobile {
   @media screen and (max-width: ($desktop - 1)) {
     display: block;
   }
 }
-.directions--desktop-view {
+.directions--new-row-desktop {
   @media screen and (min-width: $desktop) {
     display: block;
   }
