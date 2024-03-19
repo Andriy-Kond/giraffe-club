@@ -17,15 +17,37 @@
   }
 }
 
-.navigation__container {
+.navigation__wrapper {
   position: relative;
 
-  width: $mobile;
+  width: 100vw;
+  max-width: 360px;
   margin: 0 auto;
 
   @media screen and (min-width: $desktop) {
     position: static;
-    width: $desktop;
+    max-width: $desktop;
+  }
+}
+
+.menu__btn {
+  position: absolute;
+  z-index: 5;
+  top: 16px;
+  right: 20px;
+
+  background-color: transparent;
+
+  cursor: pointer;
+  transition: scale 250ms ease;
+
+  &:hover,
+  &:focus {
+    scale: 1.1;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: none;
   }
 }
 
@@ -143,27 +165,6 @@
   @media screen and (min-width: $desktop) {
     padding: 14px 10px;
     font-size: 26px;
-  }
-}
-
-.menu__btn {
-  position: absolute;
-  z-index: 5;
-  top: 16px;
-  right: 20px;
-
-  background-color: transparent;
-
-  cursor: pointer;
-  transition: scale 250ms ease;
-
-  &:hover,
-  &:focus {
-    scale: 1.1;
-  }
-
-  @media screen and (min-width: $desktop) {
-    display: none;
   }
 }
 

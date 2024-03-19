@@ -19,7 +19,7 @@
       <!-- aria-expanded - для доступності, каже чи розкрито меню. За замовчуванням false (закрите) 
         aria-controls - явно зв'язує два елементи-->
       <nav class="navigation" data-menu-nav>
-        <div class="navigation__container">
+        <div class="navigation__wrapper">
           <div class="container">
             <div class="menu" data-menu>
               <p class="menu__title">Giraffe Club</p>
@@ -51,26 +51,29 @@
                 </li>
               </ul>
             </div>
+            <button
+              type="button"
+              class="menu__btn"
+              aria-expanded="false"
+              aria-controls="menu-list"
+              data-menu-button
+            >
+              <svg
+                width="48"
+                height="48"
+                aria-label="Відкривач мобільного меню"
+              >
+                <use
+                  href="./images/svg/sprite.svg#burger-menu"
+                  class="menu__icon-menu"
+                ></use>
+                <use
+                  href="./images/svg/sprite.svg#close-cross-x48"
+                  class="menu__icon-cross"
+                ></use>
+              </svg>
+            </button>
           </div>
-
-          <button
-            type="button"
-            class="menu__btn"
-            aria-expanded="false"
-            aria-controls="menu-list"
-            data-menu-button
-          >
-            <svg width="48" height="48" aria-label="Відкривач мобільного меню">
-              <use
-                href="./images/svg/sprite.svg#burger-menu"
-                class="menu__icon-menu"
-              ></use>
-              <use
-                href="./images/svg/sprite.svg#close-cross-x48"
-                class="menu__icon-cross"
-              ></use>
-            </svg>
-          </button>
         </div>
       </nav>
     </header>
@@ -155,7 +158,7 @@
               <p class="directions__numbering">03</p>
               <p>
                 Americanschool для школярів
-                <span class="directions--new-row-mobile">(1- 11 клас)</span>
+                <span class="wrap-at-mobile">(1- 11 клас)</span>
               </p>
             </li>
             <li class="directions__item">
@@ -166,9 +169,7 @@
               <p class="directions__numbering">05</p>
               <p>
                 Підготовка до міжнародних екзаменів
-                <span class="directions--new-row-desktop"
-                  >YLE, KET, PET, FCE, IELTS</span
-                >
+                <span class="wrap-at-desktop">YLE, KET, PET, FCE, IELTS</span>
               </p>
             </li>
             <li class="directions__item">
@@ -226,9 +227,7 @@
                 <p>Стандартний</p>
                 <p class="education__detailed">
                   Заняття 2 рази на тиждень тривалістю від 30 до 60 хв.
-                  <span class="education--new-row"
-                    >(в залежності від віку).</span
-                  >
+                  <span class="wrap">(в залежності від віку).</span>
                 </p>
               </div>
             </li>
@@ -238,7 +237,7 @@
                 <p>Поглиблений</p>
                 <p class="education__detailed">
                   Заняття 3 рази на тиждень по 1 год. 20 хв.
-                  <span class="education--new-row"
+                  <span class="wrap"
                     >З Кембриджським іспитом на новий рівень в кінці навчального
                     року.</span
                   >
@@ -314,6 +313,7 @@
             <h2 class="section__title section__title--white">Наша команда</h2>
             <p class="section__text">Найкраща команда - найкращі результати</p>
           </div>
+
           <ul class="team__list">
             <li class="team__item">
               <picture>
@@ -360,82 +360,83 @@
               </div>
             </li>
             <!-- <li class="team__item">
-              <picture>
-                <source
-                  srcset="
-                    ./images/mobile/team-02-94.webp         94w,
-                    ./images/mobile/team-02-188-2x.webp    188w,
-                    ./images/mobile/team-02-282-3x.webp    282w,
-                    ./images/desktop/team-02-400.webp      476w,
-                    ./images/desktop/team-02-800-2x.webp   952w,
-                    ./images/desktop/team-02-1200-3x.webp 1428w
-                  "
-                  type="image/webp"
-                  sizes="25vw"
-                />
-                <source
-                  srcset="
-                    ./images/mobile/team-02-94.jpg         94w,
-                    ./images/mobile/team-02-188-2x.jpg    188w,
-                    ./images/mobile/team-02-282-3x.jpg    282w,
-                    ./images/desktop/team-02-400.jpg      476w,
-                    ./images/desktop/team-02-800-2x.jpg   952w,
-                    ./images/desktop/team-02-1200-3x.jpg 1428w
-                  "
-                  type="image/jpeg"
-                  sizes="25vw"
-                />
-
-                <img
-                  src="./images/mobile/team-02-94.jpg"
-                  alt="member-2"
-                  class="team__photo"
-                />
-              </picture>
-              <div class="team__info-box">
-                <p class="team__name">Валерія Звіранська</p>
-                <p class="team__position">Адміністратор</p>
-              </div>
-            </li>
-            <li class="team__item">
-              <picture>
-                <source
-                  srcset="
-                    ./images/mobile/team-03-94.webp         94w,
-                    ./images/mobile/team-03-188-2x.webp    188w,
-                    ./images/mobile/team-03-282-3x.webp    282w,
-                    ./images/desktop/team-03-400.webp      476w,
-                    ./images/desktop/team-03-800-2x.webp   952w,
-                    ./images/desktop/team-03-1200-3x.webp 1428w
-                  "
-                  sizes="25vw"
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/mobile/team-03-94.jpg         94w,
-                    ./images/mobile/team-03-188-2x.jpg    188w,
-                    ./images/mobile/team-03-282-3x.jpg    282w,
-                    ./images/desktop/team-03-400.jpg      476w,
-                    ./images/desktop/team-03-800-2x.jpg   952w,
-                    ./images/desktop/team-03-1200-3x.jpg 1428w
-                  "
-                  sizes="25vw"
-                  type="image/jpeg"
-                />
-
-                <img
-                  src="./images/mobile/team-03-94.jpg"
-                  alt="member-3"
-                  class="team__photo"
-                />
-              </picture>
-              <div class="team__info-box">
-                <p class="team__name">Наталія Шмалько</p>
-                <p class="team__position">Адміністратор</p>
-              </div>
-            </li> -->
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/team-02-94.webp         94w,
+                      ./images/mobile/team-02-188-2x.webp    188w,
+                      ./images/mobile/team-02-282-3x.webp    282w,
+                      ./images/desktop/team-02-400.webp      476w,
+                      ./images/desktop/team-02-800-2x.webp   952w,
+                      ./images/desktop/team-02-1200-3x.webp 1428w
+                    "
+                    type="image/webp"
+                    sizes="25vw"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/team-02-94.jpg         94w,
+                      ./images/mobile/team-02-188-2x.jpg    188w,
+                      ./images/mobile/team-02-282-3x.jpg    282w,
+                      ./images/desktop/team-02-400.jpg      476w,
+                      ./images/desktop/team-02-800-2x.jpg   952w,
+                      ./images/desktop/team-02-1200-3x.jpg 1428w
+                    "
+                    type="image/jpeg"
+                    sizes="25vw"
+                  />
+  
+                  <img
+                    src="./images/mobile/team-02-94.jpg"
+                    alt="member-2"
+                    class="team__photo"
+                  />
+                </picture>
+                <div class="team__info-box">
+                  <p class="team__name">Валерія Звіранська</p>
+                  <p class="team__position">Адміністратор</p>
+                </div>
+              </li>
+              <li class="team__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/team-03-94.webp         94w,
+                      ./images/mobile/team-03-188-2x.webp    188w,
+                      ./images/mobile/team-03-282-3x.webp    282w,
+                      ./images/desktop/team-03-400.webp      476w,
+                      ./images/desktop/team-03-800-2x.webp   952w,
+                      ./images/desktop/team-03-1200-3x.webp 1428w
+                    "
+                    sizes="25vw"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/team-03-94.jpg         94w,
+                      ./images/mobile/team-03-188-2x.jpg    188w,
+                      ./images/mobile/team-03-282-3x.jpg    282w,
+                      ./images/desktop/team-03-400.jpg      476w,
+                      ./images/desktop/team-03-800-2x.jpg   952w,
+                      ./images/desktop/team-03-1200-3x.jpg 1428w
+                    "
+                    sizes="25vw"
+                    type="image/jpeg"
+                  />
+  
+                  <img
+                    src="./images/mobile/team-03-94.jpg"
+                    alt="member-3"
+                    class="team__photo"
+                  />
+                </picture>
+                <div class="team__info-box">
+                  <p class="team__name">Наталія Шмалько</p>
+                  <p class="team__position">Адміністратор</p>
+                </div>
+              </li> -->
           </ul>
+          <button type="button" class="arrow"></button>
           <button type="button" class="arrow"></button>
         </div>
       </section>
@@ -446,11 +447,13 @@
             <h2 class="section__title section__title--black">Відгуки</h2>
             <p class="section__text">Що кажуть про нас</p>
           </div>
+
           <ul class="reviews__list">
             <li class="reviews__item">
               <p class="reviews__name">Ольга Березовська</p>
               <p class="reviews__position">
-                приватний нотаріус <br />м.Кропивницький
+                приватний нотаріус
+                <span class="wrap-at-mobile">м.Кропивницький</span>
               </p>
               <p class="reviews__text">
                 Високий рівень викладання – викладачі прекрасні, професіонали
@@ -490,6 +493,7 @@
               </p>
             </li> -->
           </ul>
+          <button type="button" class="arrow"></button>
           <button type="button" class="arrow"></button>
         </div>
       </section>

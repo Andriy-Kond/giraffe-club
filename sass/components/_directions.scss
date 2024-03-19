@@ -64,16 +64,16 @@
   }
 }
 
-.directions--new-row-mobile {
-  @media screen and (max-width: ($desktop - 1)) {
-    display: block;
-  }
-}
-.directions--new-row-desktop {
-  @media screen and (min-width: $desktop) {
-    display: block;
-  }
-}
+// .directions--new-row-mobile {
+//   @media screen and (max-width: ($desktop - 1)) {
+//     display: block;
+//   }
+// }
+// .directions--new-row-desktop {
+//   @media screen and (min-width: $desktop) {
+//     display: block;
+//   }
+// }
 
 .directions__btn {
   display: block;
