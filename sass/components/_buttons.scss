@@ -49,22 +49,22 @@
   }
 }
 
-.arrow {
-  min-width: 66px;
-  height: 66px;
-  margin-top: 24px;
+// .arrow {
+//   min-width: 66px;
+//   height: 66px;
+//   margin-top: 24px;
 
-  background-image: url("../../images/svg/btn-arrow.svg");
-  background-size: contain;
-  background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
+//   background-image: url("../../images/svg/btn-arrow.svg");
+//   background-size: contain;
+//   background-color: transparent;
+//   background-position: center;
+//   background-repeat: no-repeat;
 
-  @media screen and (min-width: $desktop) {
-    min-width: 106px;
-    height: 106px;
-  }
-}
+//   @media screen and (min-width: $desktop) {
+//     min-width: 106px;
+//     height: 106px;
+//   }
+// }
 
 // .btn {
 //   display: flex;

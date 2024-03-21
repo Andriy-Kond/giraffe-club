@@ -306,6 +306,58 @@ button {
   }
 }
 
+.slider-reviews.slick-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.slider-reviews.slick-slider .slick-prev {
+  order: 1;
+}
+
+.slider-reviews.slick-slider .slick-next {
+  order: 2;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  min-width: 66px;
+  height: 66px;
+  margin-top: 24px;
+  background-image: url("../../images/svg/btn-arrow-orange.svg");
+  background-size: contain;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-image 250ms ease;
+}
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  background-image: url("../../images/svg/btn-arrow-orange-hover.svg");
+}
+.slick-prev:disabled,
+.slick-next:disabled {
+  background-image: url("../../images/svg/btn-arrow-disabled.svg");
+}
+@media screen and (min-width: 1920px) {
+  .slick-prev,
+  .slick-next {
+    min-width: 106px;
+    height: 106px;
+    margin-top: 0;
+  }
+}
+
+.slick-next {
+  transform: rotate(180deg);
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -443,23 +495,6 @@ body.modal-open {
   border-color: var(--brand-main-color);
   background-color: transparent;
   color: var(--brand-main-color);
-}
-
-.arrow {
-  min-width: 66px;
-  height: 66px;
-  margin-top: 24px;
-  background-image: url("../../images/svg/btn-arrow.svg");
-  background-size: contain;
-  background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-@media screen and (min-width: 1920px) {
-  .arrow {
-    min-width: 106px;
-    height: 106px;
-  }
 }
 
 .backdrop {
@@ -1472,10 +1507,13 @@ body.modal-open {
 }
 
 .reviews__item {
+  width: 100%;
   max-width: 360px;
-  height: 332px;
+  min-height: 332px;
   padding: 16px;
   padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
   border-radius: 12px;
   background-color: var(--brand-main-color);
 }
@@ -1533,6 +1571,10 @@ body.modal-open {
 
 .reviews__position,
 .reviews__text {
+  min-height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-size: 16px;
 }
 @media screen and (min-width: 1920px) {
