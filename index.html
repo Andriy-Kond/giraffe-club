@@ -11,8 +11,18 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
+    <!--^ add slick slider -->
     <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
   </head>
   <body>
     <header>
@@ -314,7 +324,7 @@
             <p class="section__text">Найкраща команда - найкращі результати</p>
           </div>
 
-          <ul class="team__list">
+          <ul class="team__list slider">
             <li class="team__item">
               <picture>
                 <source
@@ -359,82 +369,82 @@
                 </div>
               </div>
             </li>
-            <!-- <li class="team__item">
-                <picture>
-                  <source
-                    srcset="
-                      ./images/mobile/team-02-94.webp         94w,
-                      ./images/mobile/team-02-188-2x.webp    188w,
-                      ./images/mobile/team-02-282-3x.webp    282w,
-                      ./images/desktop/team-02-400.webp      476w,
-                      ./images/desktop/team-02-800-2x.webp   952w,
-                      ./images/desktop/team-02-1200-3x.webp 1428w
-                    "
-                    type="image/webp"
-                    sizes="25vw"
-                  />
-                  <source
-                    srcset="
-                      ./images/mobile/team-02-94.jpg         94w,
-                      ./images/mobile/team-02-188-2x.jpg    188w,
-                      ./images/mobile/team-02-282-3x.jpg    282w,
-                      ./images/desktop/team-02-400.jpg      476w,
-                      ./images/desktop/team-02-800-2x.jpg   952w,
-                      ./images/desktop/team-02-1200-3x.jpg 1428w
-                    "
-                    type="image/jpeg"
-                    sizes="25vw"
-                  />
-  
-                  <img
-                    src="./images/mobile/team-02-94.jpg"
-                    alt="member-2"
-                    class="team__photo"
-                  />
-                </picture>
-                <div class="team__info-box">
-                  <p class="team__name">Валерія Звіранська</p>
-                  <p class="team__position">Адміністратор</p>
-                </div>
-              </li>
-              <li class="team__item">
-                <picture>
-                  <source
-                    srcset="
-                      ./images/mobile/team-03-94.webp         94w,
-                      ./images/mobile/team-03-188-2x.webp    188w,
-                      ./images/mobile/team-03-282-3x.webp    282w,
-                      ./images/desktop/team-03-400.webp      476w,
-                      ./images/desktop/team-03-800-2x.webp   952w,
-                      ./images/desktop/team-03-1200-3x.webp 1428w
-                    "
-                    sizes="25vw"
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/mobile/team-03-94.jpg         94w,
-                      ./images/mobile/team-03-188-2x.jpg    188w,
-                      ./images/mobile/team-03-282-3x.jpg    282w,
-                      ./images/desktop/team-03-400.jpg      476w,
-                      ./images/desktop/team-03-800-2x.jpg   952w,
-                      ./images/desktop/team-03-1200-3x.jpg 1428w
-                    "
-                    sizes="25vw"
-                    type="image/jpeg"
-                  />
-  
-                  <img
-                    src="./images/mobile/team-03-94.jpg"
-                    alt="member-3"
-                    class="team__photo"
-                  />
-                </picture>
-                <div class="team__info-box">
-                  <p class="team__name">Наталія Шмалько</p>
-                  <p class="team__position">Адміністратор</p>
-                </div>
-              </li> -->
+            <li class="team__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/team-02-94.webp         94w,
+                    ./images/mobile/team-02-188-2x.webp    188w,
+                    ./images/mobile/team-02-282-3x.webp    282w,
+                    ./images/desktop/team-02-400.webp      476w,
+                    ./images/desktop/team-02-800-2x.webp   952w,
+                    ./images/desktop/team-02-1200-3x.webp 1428w
+                  "
+                  type="image/webp"
+                  sizes="25vw"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-02-94.jpg         94w,
+                    ./images/mobile/team-02-188-2x.jpg    188w,
+                    ./images/mobile/team-02-282-3x.jpg    282w,
+                    ./images/desktop/team-02-400.jpg      476w,
+                    ./images/desktop/team-02-800-2x.jpg   952w,
+                    ./images/desktop/team-02-1200-3x.jpg 1428w
+                  "
+                  type="image/jpeg"
+                  sizes="25vw"
+                />
+
+                <img
+                  src="./images/mobile/team-02-94.jpg"
+                  alt="member-2"
+                  class="team__photo"
+                />
+              </picture>
+              <div class="team__info-box">
+                <p class="team__name">Валерія Звіранська</p>
+                <p class="team__position">Адміністратор</p>
+              </div>
+            </li>
+            <li class="team__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/team-03-94.webp         94w,
+                    ./images/mobile/team-03-188-2x.webp    188w,
+                    ./images/mobile/team-03-282-3x.webp    282w,
+                    ./images/desktop/team-03-400.webp      476w,
+                    ./images/desktop/team-03-800-2x.webp   952w,
+                    ./images/desktop/team-03-1200-3x.webp 1428w
+                  "
+                  sizes="25vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-03-94.jpg         94w,
+                    ./images/mobile/team-03-188-2x.jpg    188w,
+                    ./images/mobile/team-03-282-3x.jpg    282w,
+                    ./images/desktop/team-03-400.jpg      476w,
+                    ./images/desktop/team-03-800-2x.jpg   952w,
+                    ./images/desktop/team-03-1200-3x.jpg 1428w
+                  "
+                  sizes="25vw"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/mobile/team-03-94.jpg"
+                  alt="member-3"
+                  class="team__photo"
+                />
+              </picture>
+              <div class="team__info-box">
+                <p class="team__name">Наталія Шмалько</p>
+                <p class="team__position">Адміністратор</p>
+              </div>
+            </li>
           </ul>
           <button type="button" class="arrow"></button>
           <button type="button" class="arrow"></button>
@@ -595,5 +605,48 @@
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/openMap.js"></script>
+
+    <!--^ add slick slider -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <!-- slider initialization  -->
+    <script>
+      $(".slider").slick({
+        centerMode: true,
+        centerPadding: "60px",
+        slidesToShow: 3,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "40px",
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "40px",
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+    </script>
+    <!--^/ add slick slider -->
   </body>
 </html>
