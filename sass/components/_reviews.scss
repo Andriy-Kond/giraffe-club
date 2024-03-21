@@ -91,12 +91,15 @@
 .reviews__position,
 .reviews__text {
   min-height: 45px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   font-size: 16px;
   @media screen and (min-width: $desktop) {
+    display: block;
+
     font-weight: 300;
     font-size: 26px;
   }

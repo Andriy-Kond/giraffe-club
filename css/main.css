@@ -1580,6 +1580,7 @@ body.modal-open {
 @media screen and (min-width: 1920px) {
   .reviews__position,
   .reviews__text {
+    display: block;
     font-weight: 300;
     font-size: 26px;
   }
