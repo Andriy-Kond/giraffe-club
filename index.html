@@ -518,8 +518,6 @@
               </p>
             </li>
           </ul>
-          <!-- <button type="button" class="arrow"></button>
-          <button type="button" class="arrow"></button> -->
         </div>
       </section>
 
@@ -640,47 +638,49 @@
 
     <!-- slider initialization  -->
     <script>
-      $(".slider-team").slick({
-        dots: true,
+      $('.team__list').slick({
+        // centerMode: true,
+        // // centerPadding: '60px',
+        // responsive: [
+        //   {
+        //     breakpoint: 1920,
+        //     settings: {
+        //       centerMode: true,
+        //       // centerPadding: '40px',
+        //       slidesToShow: 2,
+        //     },
+        //   },
+        //   {
+        //     breakpoint: 360,
+        //     settings: {
+        //       centerMode: true,
+        //       // centerPadding: '40px',
+        //       slidesToShow: 2,
+        //     },
+        //   },
+        // ],
 
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
         centerMode: true,
-        centerPadding: "60px",
-        slidesToShow: 3,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: "40px",
-              slidesToShow: 3,
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: "40px",
-              slidesToShow: 1,
-            },
-          },
-        ],
+        variableWidth: true,
+        prevArrow:
+          '<button type="button" class="slick-prev "> <svg class="btn-arrow-icon btn-arrow-icon--white"> <use href="./images/svg/sprite.svg#btn-arrow"></use> </svg>  </button>',
+        nextArrow:
+          '<button type="button" class="slick-next"> <svg class="btn-arrow-icon btn-arrow-icon--white"> <use href="./images/svg/sprite.svg#btn-arrow"></use> </svg>  </button>',
       });
     </script>
 
     <script>
-      $(".reviews__list").slick({
-        speed: 1300,
+      $('.reviews__list').slick({
+        speed: 300,
         slidesToShow: 1,
         adaptiveHeight: true,
-        // centerPadding: "80px",
-        // arrows: true,
-        edgeFriction: 0.5,
         prevArrow:
-          '<button type="button" class="slick-prev"> <svg class="btn-arrow-icon"> <use href="./images/svg/sprite.svg#btn-arrow"></use> </svg>  </button>',
+          '<button type="button" class="slick-prev"> <svg class="btn-arrow-icon btn-arrow-icon--orange"> <use href="./images/svg/sprite.svg#btn-arrow"></use> </svg>  </button>',
         nextArrow:
-          '<button type="button" class="slick-next"> <svg class="btn-arrow-icon"> <use href="./images/svg/sprite.svg#btn-arrow"></use> </svg>  </button>',
+          '<button type="button" class="slick-next"> <svg class="btn-arrow-icon btn-arrow-icon--orange"> <use href="./images/svg/sprite.svg#btn-arrow"></use> </svg>  </button>',
       });
     </script>
     <!--^/ add slick slider -->

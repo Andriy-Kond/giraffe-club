@@ -1,20 +1,41 @@
-.slider-team {
-}
-
-.reviews__list.slick-slider {
+.reviews__list.slick-slider,
+.team__list.slick-slider {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   @media screen and (min-width: $desktop) {
     flex-wrap: nowrap;
-    gap: 70px;
+    gap: 64px;
     align-items: center;
-
-    // &:not(:last-child) {
-    //   margin-left: 80px;
-    // }
   }
+}
+
+.slick-track {
+  display: flex;
+  gap: 20px;
+
+  .team & {
+    height: 300px;
+
+    @media screen and (min-width: $desktop) {
+      height: 928px;
+    }
+  }
+
+  .reviews & {
+    height: 340px;
+
+    @media screen and (min-width: $desktop) {
+      height: 340px;
+    }
+  }
+}
+
+.team__item.slick-center {
+  // height: 928px;
+  // width: 476px;
+  scale: 1;
 }
 
 .slick-prev {
@@ -47,24 +68,42 @@
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-
-  fill: var(--brand-main-color);
-  border: 1px solid var(--brand-main-color);
+  border-width: 1px;
+  border-style: solid;
 
   transition: fill 250ms ease, border-color 250ms ease,
     background-color 250ms ease;
-
-  &:hover,
-  &:focus {
-    fill: var(--brand-white-color);
-    background-color: var(--brand-main-color);
-    border-color: var(--brand-main-color);
-  }
 
   &:disabled {
     fill: var(--disabled-text-color);
     background-color: var(--disabled-btn-color);
     border-color: var(--disabled-btn-color);
+  }
+
+  &--orange {
+    fill: var(--brand-main-color);
+    border-color: var(--brand-main-color);
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      fill: var(--brand-white-color);
+      background-color: var(--brand-main-color);
+      border-color: var(--brand-main-color);
+    }
+  }
+
+  &--white {
+    fill: var(--brand-white-color);
+    background-color: transparent;
+    border-color: var(--brand-white-color);
+
+    &:hover,
+    &:focus {
+      fill: var(--brand-main-color);
+      background-color: var(--brand-white-color);
+      border-color: var(--brand-white-color);
+    }
   }
 
   @media screen and (min-width: $desktop) {
