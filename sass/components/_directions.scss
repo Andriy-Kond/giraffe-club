@@ -91,7 +91,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     right: 16px;
@@ -100,11 +100,11 @@
     width: 60px;
     height: 116px;
 
-    background-image: url("../../images/mobile/giraffe-directions-60.png");
+    background-image: url('../images/mobile/giraffe-directions-60.png');
     background-image: image-set(
-      url("../../images/mobile/giraffe-directions-60.png") 1x,
-      url("../../images/mobile/giraffe-directions-120-2x.png") 2x,
-      url("../../images/mobile/giraffe-directions-180-3x.png") 3x
+      url('../images/mobile/giraffe-directions-60.png') 1x,
+      url('../images/mobile/giraffe-directions-120-2x.png') 2x,
+      url('../images/mobile/giraffe-directions-180-3x.png') 3x
     );
     background-size: 60px 116px;
 
@@ -114,11 +114,11 @@
       right: 0;
       bottom: 150px;
 
-      background-image: url("../../images/desktop//giraffe-directions-418.png");
+      background-image: url('../images/desktop//giraffe-directions-418.png');
       background-image: image-set(
-        url("../../images/desktop/giraffe-directions-418.png") 1x,
-        url("../../images/desktop/giraffe-directions-836-2x.png") 2x,
-        url("../../images/desktop/giraffe-directions-1254-3x.png") 3x
+        url('../images/desktop/giraffe-directions-418.png') 1x,
+        url('../images/desktop/giraffe-directions-836-2x.png') 2x,
+        url('../images/desktop/giraffe-directions-1254-3x.png') 3x
       );
       background-size: contain;
     }
