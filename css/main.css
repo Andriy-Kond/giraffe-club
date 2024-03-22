@@ -311,9 +311,17 @@ button {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media screen and (min-width: 1920px) {
+  .slider-reviews.slick-slider {
+    flex-wrap: nowrap;
+    gap: 70px;
+  }
+}
 
-.slider-reviews.slick-slider .slick-prev {
-  order: 1;
+@media screen and (max-width: 1919px) {
+  .slider-reviews.slick-slider .slick-prev {
+    order: 1;
+  }
 }
 
 .slider-reviews.slick-slider .slick-next {
