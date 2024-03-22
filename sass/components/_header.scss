@@ -159,7 +159,7 @@
   &:hover,
   &:focus {
     scale: 1.01;
-    color: var(--brand-main-color);
+    color: var(--brand-white-color);
   }
 
   @media screen and (min-width: $desktop) {
@@ -189,10 +189,13 @@
   }
 }
 
-.contacts__item {
+.contacts__link {
+  display: block;
   width: 40px;
   height: 40px;
   background-position: center;
+
+  transition: scale 250ms ease;
 
   &--phone-icon {
     background-image: url("../../images/svg/phone.svg");
@@ -205,5 +208,10 @@
   &--email-icon {
     width: 44px;
     background-image: url("../../images/svg/email.svg");
+  }
+
+  &:hover,
+  &:focus {
+    scale: 1.1;
   }
 }

@@ -49,20 +49,28 @@
               </ul>
 
               <ul class="contacts">
-                <li class="contacts__item contacts__item--phone-icon">
-                  <a href="tel:+380672333333"></a>
+                <li>
+                  <a
+                    href="tel:+380672333333"
+                    class="contacts__link contacts__link--phone-icon"
+                  ></a>
                 </li>
-                <li class="contacts__item contacts__item--location-icon">
+                <li>
                   <a
                     href=""
                     onclick="openMap()"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="contacts__link contacts__link--location-icon"
                   >
                   </a>
                 </li>
-                <li class="contacts__item contacts__item--email-icon">
-                  <a href="email:a@mail.com"> </a>
+                <li>
+                  <a
+                    href="email:a@mail.com"
+                    class="contacts__link contacts__link--email-icon"
+                  >
+                  </a>
                 </li>
               </ul>
             </div>
@@ -329,7 +337,7 @@
             <p class="section__text">Найкраща команда - найкращі результати</p>
           </div>
 
-          <ul class="team__list slider-team">
+          <ul class="team__list">
             <li class="team__item">
               <picture>
                 <source
@@ -463,7 +471,7 @@
             <p class="section__text">Що кажуть про нас</p>
           </div>
 
-          <ul class="slider-reviews reviews__list">
+          <ul class="reviews__list">
             <li class="reviews__item">
               <p class="reviews__name">Ольга Березовська</p>
               <p class="reviews__position">
@@ -662,7 +670,18 @@
     </script>
 
     <script>
-      $(".slider-reviews").slick();
+      $(".reviews__list").slick({
+        speed: 1300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        // centerPadding: "80px",
+        // arrows: true,
+        edgeFriction: 0.5,
+        prevArrow:
+          '<button type="button" class="slick-prev"> <svg class="btn-arrow-icon"> <use href="./images/svg/sprite.svg#btn-arrow"></use> </svg>  </button>',
+        nextArrow:
+          '<button type="button" class="slick-next"> <svg class="btn-arrow-icon"> <use href="./images/svg/sprite.svg#btn-arrow"></use> </svg>  </button>',
+      });
     </script>
     <!--^/ add slick slider -->
   </body>
