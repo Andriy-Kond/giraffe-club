@@ -770,7 +770,12 @@ body.modal-open {
 }
 .menu-list__item:hover, .menu-list__item:focus {
   scale: 1.01;
-  color: var(--brand-white-color);
+  color: var(--brand-main-color);
+}
+@media screen and (min-width: 1920px) {
+  .menu-list__item:hover, .menu-list__item:focus {
+    color: var(--brand-white-color);
+  }
 }
 @media screen and (min-width: 1920px) {
   .menu-list__item {

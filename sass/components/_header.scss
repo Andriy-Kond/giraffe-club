@@ -86,7 +86,7 @@
   @media screen and (max-width: ($desktop - 1)) {
     // orange line-border
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 72px;
       left: 0;
@@ -100,25 +100,25 @@
 
     // bg image in mobile menu
     &::after {
-      content: "";
+      content: '';
       height: 195px;
 
-      background-image: url("../../images/mobile/giraffe-hero-140.png");
+      background-image: url('../../images/mobile/giraffe-hero-140.png');
       background-image: image-set(
-        url("../../images/mobile/giraffe-hero-140.png") 1x,
-        url("../../images/mobile/giraffe-hero-280-2x.png") 2x,
-        url("../../images/mobile/giraffe-hero-420-3x.png") 3x
+        url('../../images/mobile/giraffe-hero-140.png') 1x,
+        url('../../images/mobile/giraffe-hero-280-2x.png') 2x,
+        url('../../images/mobile/giraffe-hero-420-3x.png') 3x
       );
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
 
       @media screen and (min-width: $desktop) {
-        background-image: url("../../images/desktop/giraffe-hero-539.png");
+        background-image: url('../../images/desktop/giraffe-hero-539.png');
         background-image: image-set(
-          url("../../images/desktop/giraffe-hero-539.png") 1x,
-          url("../../images/desktop/giraffe-hero-1078-2x.png") 2x,
-          url("../../images/desktop/giraffe-hero-1617-3x.png") 3x
+          url('../../images/desktop/giraffe-hero-539.png') 1x,
+          url('../../images/desktop/giraffe-hero-1078-2x.png') 2x,
+          url('../../images/desktop/giraffe-hero-1617-3x.png') 3x
         );
       }
     }
@@ -159,7 +159,11 @@
   &:hover,
   &:focus {
     scale: 1.01;
-    color: var(--brand-white-color);
+    color: var(--brand-main-color);
+
+    @media screen and (min-width: $desktop) {
+      color: var(--brand-white-color);
+    }
   }
 
   @media screen and (min-width: $desktop) {
@@ -198,16 +202,16 @@
   transition: scale 250ms ease;
 
   &--phone-icon {
-    background-image: url("../../images/svg/phone.svg");
+    background-image: url('../../images/svg/phone.svg');
   }
 
   &--location-icon {
-    background-image: url("../../images/svg/location.svg");
+    background-image: url('../../images/svg/location.svg');
   }
 
   &--email-icon {
     width: 44px;
-    background-image: url("../../images/svg/email.svg");
+    background-image: url('../../images/svg/email.svg');
   }
 
   &:hover,

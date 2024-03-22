@@ -1,5 +1,9 @@
 ### Practice of html&css(sass/scss)
 
-### Mobile and Desktop Responsive+Adaptive Layout
+## Mobile Responsive and Desktop Adaptive Layouts
 
-### Modal window
+## Modal windows
+
+## Integrated the Slick library
+
+# https://kenwheeler.github.io/slick/
