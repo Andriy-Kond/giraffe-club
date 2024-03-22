@@ -320,8 +320,9 @@ button {
 }
 
 .slick-prev {
-  background-color: transparent;
   margin-top: 24px;
+  background-color: transparent;
+  align-self: center;
 }
 @media screen and (max-width: 1919px) {
   .slick-prev {
@@ -330,8 +331,15 @@ button {
 }
 
 .slick-next {
-  align-self: end;
   order: 2;
+  align-self: end;
+  background-color: transparent;
+  transform: rotate(180deg);
+}
+@media screen and (min-width: 1920px) {
+  .slick-next {
+    align-self: center;
+  }
 }
 
 .btn-arrow-icon {
@@ -342,7 +350,18 @@ button {
   overflow: hidden;
   cursor: pointer;
   fill: var(--brand-main-color);
-  transition: background-image 250ms ease;
+  border: 1px solid var(--brand-main-color);
+  transition: fill 250ms ease, border-color 250ms ease, background-color 250ms ease;
+}
+.btn-arrow-icon:hover, .btn-arrow-icon:focus {
+  fill: var(--brand-white-color);
+  background-color: var(--brand-main-color);
+  border-color: var(--brand-main-color);
+}
+.btn-arrow-icon:disabled {
+  fill: var(--disabled-text-color);
+  background-color: var(--disabled-btn-color);
+  border-color: var(--disabled-btn-color);
 }
 @media screen and (min-width: 1920px) {
   .btn-arrow-icon {
@@ -350,12 +369,6 @@ button {
     height: 106px;
     margin-top: 0;
   }
-}
-
-.slick-next {
-  background-color: transparent;
-  margin-top: 0;
-  transform: rotate(180deg);
 }
 
 .visually-hidden {

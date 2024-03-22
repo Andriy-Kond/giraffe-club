@@ -18,8 +18,9 @@
 }
 
 .slick-prev {
-  background-color: transparent;
   margin-top: 24px;
+  background-color: transparent;
+  align-self: center;
 
   @media screen and (max-width: ($desktop - 1)) {
     order: 1;
@@ -27,8 +28,15 @@
 }
 
 .slick-next {
-  align-self: end;
   order: 2;
+  align-self: end;
+  background-color: transparent;
+
+  transform: rotate(180deg);
+
+  @media screen and (min-width: $desktop) {
+    align-self: center;
+  }
 }
 
 .btn-arrow-icon {
@@ -41,16 +49,22 @@
   cursor: pointer;
 
   fill: var(--brand-main-color);
+  border: 1px solid var(--brand-main-color);
 
-  transition: background-image 250ms ease;
+  transition: fill 250ms ease, border-color 250ms ease,
+    background-color 250ms ease;
 
   &:hover,
   &:focus {
-    // background-image: url("../../images/svg/btn-arrow-orange-hover.svg");
+    fill: var(--brand-white-color);
+    background-color: var(--brand-main-color);
+    border-color: var(--brand-main-color);
   }
 
   &:disabled {
-    // background-image: url("../../images/svg/btn-arrow-disabled.svg");
+    fill: var(--disabled-text-color);
+    background-color: var(--disabled-btn-color);
+    border-color: var(--disabled-btn-color);
   }
 
   @media screen and (min-width: $desktop) {
@@ -58,47 +72,4 @@
     height: 106px;
     margin-top: 0;
   }
-}
-
-// .slick-prev,
-// .slick-next {
-//   font-size: 0;
-//   min-width: 66px;
-//   height: 66px;
-//   margin-top: 24px;
-
-//   background-image: url("../../images/svg/btn-arrow-orange.svg");
-//   background-size: contain;
-//   background-color: transparent;
-//   background-position: center;
-//   background-repeat: no-repeat;
-
-//   border-radius: 50%;
-//   overflow: hidden;
-
-//   cursor: pointer;
-
-//   transition: background-image 250ms ease;
-
-//   &:hover,
-//   &:focus {
-//     background-image: url("../../images/svg/btn-arrow-orange-hover.svg");
-//   }
-
-//   &:disabled {
-//     background-image: url("../../images/svg/btn-arrow-disabled.svg");
-//   }
-
-//   @media screen and (min-width: $desktop) {
-//     min-width: 106px;
-//     height: 106px;
-//     margin-top: 0;
-//   }
-// }
-
-.slick-next {
-  background-color: transparent;
-  margin-top: 0;
-
-  transform: rotate(180deg);
 }
