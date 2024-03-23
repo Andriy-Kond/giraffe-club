@@ -1,3 +1,5 @@
+'use strict';
+
 function openMap() {
   // lat і lng - координати мітки:
   const lat = 48.501886457926275;

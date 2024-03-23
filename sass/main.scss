@@ -11,29 +11,31 @@
 //  outline: 1px solid black; - визначення для візуального орієнтиру
 
 // todo Переробити галерею в секції journey to grid
+// todo Додати JS
+// todo translate to CamelCase
 
-@import "./base/modern-normalize-v2.0.0";
-@import "./base/project-normalize";
-@import "./base/breakpoints";
-@import "./utils/variables";
-@import "./utils/wraps";
-@import "./utils/slider";
+@import './base/modern-normalize-v2.0.0';
+@import './base/project-normalize';
+@import './base/breakpoints';
+@import './utils/variables';
+@import './utils/wraps';
+@import './utils/slider';
 
-@import "./common/visually-hidden";
-@import "./common/container";
-@import "./common/common";
+@import './common/visually-hidden';
+@import './common/container';
+@import './common/common';
 
-@import "./components/section";
-@import "./components/buttons";
-@import "./components/modal";
-@import "./components/header";
-@import "./components/hero";
-@import "./components/about";
-@import "./components/directions";
-@import "./components/education";
-@import "./components/journey";
-@import "./components/team";
-@import "./components/reviews";
-@import "./components/socials";
+@import './components/section';
+@import './components/buttons';
+@import './components/modal';
+@import './components/header';
+@import './components/hero';
+@import './components/about';
+@import './components/directions';
+@import './components/education';
+@import './components/journey';
+@import './components/team';
+@import './components/reviews';
+@import './components/socials';
 
-@import "./components/footer";
+@import './components/footer';
